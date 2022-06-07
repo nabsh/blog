@@ -14,7 +14,6 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 # disqusShortname = ""
 
 contentDir   = "content"
-publishDir   = "public"
 
 buildDrafts  = false
 buildFuture  = false
