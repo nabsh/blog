@@ -13,10 +13,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 # googleAnalytics = ""
 # disqusShortname = ""
 
-archetypeDir = "archetypes"
 contentDir   = "content"
-dataDir      = "data"
-layoutDir    = "layouts"
 publishDir   = "public"
 
 buildDrafts  = false
