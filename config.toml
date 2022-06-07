@@ -1,4 +1,4 @@
-baseurl      = "localhost"
+baseurl      = "https://mellow-sprinkles-d4a2d0.netlify.app/"
 title        = "My Blog"
 languageCode = "en-us"
 theme = "hello-friend-ng" 
