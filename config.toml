@@ -4,6 +4,9 @@ languageCode = "en-us"
 theme = "hello-friend-ng" 
 paginate     = 10
 
+contentDir   = "content"
+
+
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
@@ -44,6 +47,9 @@ paginate     = 10
     #
     # path = "/img/your-example-logo.svg"
     # alt = "Your example logo alt text"
+
+
+
 
   # And you can even create generic menu
   [[menu.main]]
