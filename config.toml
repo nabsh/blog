@@ -31,7 +31,7 @@ paginate     = 10
 
 [languages]
   [languages.en]
-    title = "Personal page"
+    title = "Welcome on Nabil's blog"
     subtitle = "Nabil Sheikh Hassan"
     keywords = ""
     copyright = '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>'
@@ -47,6 +47,10 @@ paginate     = 10
 
   # And you can even create generic menu
   [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/posts"
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "posts/"
