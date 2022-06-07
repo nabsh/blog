@@ -6,8 +6,6 @@ aliases = ["about-us","about-hugo","contact"]
   name = "Nabil Sheikh Hassan"
 +++
 
-# Qui suis-je ?
-
 Je suis actuellement chercheur en économie à l‘[IRES](https://uclouvain.be/en/research-institutes/lidam/ires) (UCLouvain) et assistant à la [FOPES](https://uclouvain.be/fr/facultes/espo/fopes) (UCLouvain). Je suis également chargé de cours invité à l'[ISFSC](https://www.isfsc.be/). Par ailleurs, je suis impliqué au sein du webmédia [Tout va Bien](https://toutvabien.tv).
 
 ## Quelques contributions en dehors de ce Blog
