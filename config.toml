@@ -138,7 +138,7 @@ disableHugoGeneratorInject = false
 
   [languages.fr.params.logo]
 	weight = 1
-    logoText = "$ Encore un blog d'économie"
+    logoText = "Encore un blog d'économie"
 	logoMark     = ">"
     logoHomeLink = "/"
     # Set true to remove the logo cursor entirely.
@@ -162,7 +162,7 @@ disableHugoGeneratorInject = false
   homeSubtitle = "Blog from Nabil Sheikh Hassan | Economics | Inequality | ... "
   
   # Metadata mostly used in document's head
-  description = "Another economics blog"
+  description = "Yet another economics blog"
   keywords = "homepage, blog, economics, political economics, inequality, union, capitalism"
   images = [""]
   
