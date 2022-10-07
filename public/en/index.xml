@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Another economics blog</title>
+    <link>https://mellow-sprinkles-d4a2d0.netlify.app/en/</link>
+    <description>Recent content on Another economics blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc-sa/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 13 Jun 2022 15:04:00 +0000</lastBuildDate><atom:link href="https://mellow-sprinkles-d4a2d0.netlify.app/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>https://mellow-sprinkles-d4a2d0.netlify.app/en/posts/2022/06/hello-world/</link>
+      <pubDate>Mon, 13 Jun 2022 15:04:00 +0000</pubDate>
+      
+      <guid>https://mellow-sprinkles-d4a2d0.netlify.app/en/posts/2022/06/hello-world/</guid>
+      <description>Hello world !</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://mellow-sprinkles-d4a2d0.netlify.app/en/about/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mellow-sprinkles-d4a2d0.netlify.app/en/about/</guid>
+      <description>I am currently a research student at IRES (UCLouvain) and teaching assistant at FOPES (UCLouvain). I am also invited professor at ISFSC. Beside this, I am involved into a belgian french-speaking webmedia called Tout va Bien.</description>
+    </item>
+    
+  </channel>
+</rss>

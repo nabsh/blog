@@ -2,15 +2,16 @@ baseurl      = "https://mellow-sprinkles-d4a2d0.netlify.app/"
 title        = "My Blog"
 languageCode = "en-us"
 theme = "hello-friend-ng"
- 
+defaultContentLanguage = 'fr' 
+
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
 
-paginate  = 10
-rssLimit  = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+paginate  = 15
+rssLimit  = 20  # Maximum number of items in the RSS feed.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial-SA 4.0 International License." # This message is only used by the RSS template.
 
-# googleAnalytics = ""
+googleAnalytics = "G-PXWW2HLW67"
 # disqusShortname = ""
 
 
@@ -33,7 +34,7 @@ disableHugoGeneratorInject = false
   posts = "/posts/:year/:month/:title/"
 
 [author]
-  name = "Jane Doe"
+  name = "Nabil Sheikh Hassan"
 
 [blackfriday]
   hrefTargetBlank = true
@@ -49,41 +50,143 @@ disableHugoGeneratorInject = false
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04"
 
-  # Subtitle for home
-  homeSubtitle = "Another blog about economics and other things"
+  # Global language menu
+  #
+  # Enables the global language menu.
+  #
+  enableGlobalLanguageMenu = true
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
 
   # Enable sharing buttons, if you like
   enableSharingButtons = true
+  
+  # Let user choose their background color
+  enableThemeToggle = true
 
-  # Metadata mostly used in document's head
-  description = "Another economics blog"
-  keywords = "homepage, blog, economics, économie"
-  images = [""]
+ # Colors for favicons
+  [params.favicon.color]
+    mask = "#DBA800"
+    msapplication = "#DBA800"
+    theme = "#DBA800"
+
+  # Commento
+  [params.commento]
+  #   url = ""
+
+  # Uncomment this if you want a portrait on your start page
+  #
+  # [params.portrait]
+  #   path     = "/img/image.jpg"
+  #   alt      = "Portrait"
+  #   maxWidth = "50px"
+
+  # Social icons
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/nsheikhhassan"
+	
+  # Social icons
+  [[params.social]]
+    name = "facebook"
+    url  = "https://facebook.com/nsheikhhassan"
+  
+  # Social icons
+  [[params.social]]
+    name = "instagram"
+    url  = "https://www.instagram.com/naaabsh/"
+  
+  # Social icons
+  [[params.social]]
+    name = "youtube"
+    url  = "https://www.youtube.com/toutvabienmedia"
+	
+  # [[params.social]]
+  #   name = "email"
+  #   url  = "mailto:nobody@example.com"
+
+  # [[params.social]]
+  #   name = "github"
+  #   url  = "https://github.com/nabsh"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/nabil-sheikh-hassan-a9701943"
+
+
+
 
 
 [languages]
+  [languages.fr]
+    title = "Encore un blog d'économie (so 2010 ...)"
+    subtitle = "Blog de Nabil Sheikh Hassan"
+	weight = 1
+    keywords = ""
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>'
+    readOtherPosts = "Lire plus"
+
+  [languages.fr.params]
+  # Subtitle for home
+  homeSubtitle = "Blog de Nabil Sheikh Hassan | Economie politique | Inégalités | ... "
+  
+  # Metadata mostly used in document's head
+  description = "Encore un blog d'économie"
+  keywords = "homepage, blog, économie, économie politique, inégalités, syndicats, capitalisme"
+  images = [""]
+
+  [languages.fr.params.logo]
+	weight = 1
+    logoText = "$ Encore un blog d'économie"
+	logoMark     = ">"
+    logoHomeLink = "/"
+    # Set true to remove the logo cursor entirely.
+    # logoCursorDisabled = false
+    # Set to a valid CSS color to change the cursor in the logo.
+    logoCursorColor    = "#DBA800"
+    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+    # logoCursorAnimate  = "2s"
+
+
   [languages.en]
-    title = "Welcome on Nabil's blog"
-    subtitle = "Nabil Sheikh Hassan"
+    title = "Yet another economics blog (so 2010...)"
+    subtitle = "Nabil Sheikh Hassan blog"
+	weight = 2
     keywords = ""
     copyright = '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>'
     readOtherPosts = "Read more"
 
-    [languages.en.params.logo]
-      logoText = "Nabil's personnal page"
-      logoHomeLink = "/"
+  [languages.en.params]
+  # Subtitle for home
+  homeSubtitle = "Blog from Nabil Sheikh Hassan | Economics | Inequality | ... "
+  
+  # Metadata mostly used in document's head
+  description = "Another economics blog"
+  keywords = "homepage, blog, economics, political economics, inequality, union, capitalism"
+  images = [""]
+  
+
+
+  [languages.en.params.logo]
+  	weight = 2
+    logoText = "Another economics blog"
+    logoMark     = ">"
+    logoHomeLink = "/"
+    # Set true to remove the logo cursor entirely.
+    # logoCursorDisabled = false
+    # Set to a valid CSS color to change the cursor in the logo.
+    logoCursorColor    = "#DBA800"
+	
+    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+    # logoCursorAnimate  = "2s"
     # or
     #
     # path = "/img/your-example-logo.svg"
     # alt = "Your example logo alt text"
 
 
-
-
-  # And you can even create generic menu
+# And you can even create generic menu
   [[menu.main]]
     identifier = "about"
     name       = "About"
@@ -92,3 +195,5 @@ disableHugoGeneratorInject = false
     identifier = "posts"
     name       = "Posts"
     url        = "posts/"
+	
+	

@@ -1,10 +1,11 @@
-+++
-title = "About"
-date = "2022-01-01"
-aliases = ["about-us","about-hugo","contact"]
-[ author ]
-  name = "Nabil Sheikh Hassan"
-+++
+---
+title: About
+date: "2022-01-01"
+aliases :
+- about-us
+author:
+  name: "Nabil Sheikh Hassan"
+---
 
 Je suis actuellement chercheur en économie à l‘[IRES](https://uclouvain.be/en/research-institutes/lidam/ires) (UCLouvain) et assistant à la [FOPES](https://uclouvain.be/fr/facultes/espo/fopes) (UCLouvain). Je suis également chargé de cours invité à l'[ISFSC](https://www.isfsc.be/). Par ailleurs, je suis impliqué au sein du webmédia [Tout va Bien](https://toutvabien.tv).
 
