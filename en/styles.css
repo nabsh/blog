@@ -1,0 +1,178 @@
+/* Custom CSS for Quarto Home Page Rectangles */
+
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lora:wght@400;700&display=swap');
+
+/* Font Settings */
+body {
+  font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+/* Nouvelle palette de couleurs */
+:root {
+  --color-primary: #588b8b; /* Bleu-vert profond */
+  --color-secondary: #c8553d; /* Orange terracotta */
+  --color-accent: #ffd166; /* Jaune moutarde */
+  --color-background: #f5f5f5; /* Gris très clair */
+  --color-text: #2e2e2e; /* Gris très foncé */
+  --color-light: #ffffff; /* Blanc */
+  --color-dark: #1a1a1a; /* Noir profond */
+
+  /* Couleurs supplémentaires pour les cartes et boutons */
+  --color-card-border: #588b8b;
+  --color-button-primary: #588b8b;
+  --color-button-secondary: #c8553d;
+  --color-button-accent: #ffd166;
+}
+
+/* Appliquer la nouvelle palette au body */
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* Navbar Styling */
+.navbar {
+  font-family: 'Fjalla One', sans-serif;
+  background-color: var(--color-light); /* Fond blanc */
+  border-bottom: 3px solid var(--color-primary); /* Ligne de séparation en couleur primaire */
+  padding: 10px;
+  color: var(--color-text);
+}
+
+.navbar a {
+  color: var(--color-text); /* Texte en couleur foncée */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--color-primary); /* Couleur au survol */
+}
+
+/* Style pour l'icône du menu mobile (hamburger icon) */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23588b8b' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Link Colors */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* General Card Styling */
+.card {
+  background-color: var(--color-light);
+  border-radius: 5px;
+  border: 4px solid var(--color-card-border);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  height: auto;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-width 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Colors for Each Card */
+#card-first {
+  border-color: var(--color-primary);
+}
+
+#card-second {
+  border-color: var(--color-secondary);
+}
+
+#card-third {
+  border-color: var(--color-accent);
+}
+
+#card-fourth {
+  border-color: var(--color-primary);
+}
+
+/* Button Styling */
+.card-button {
+  background-color: var(--color-button-primary);
+  color: var(--color-light);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#card-second .card-button {
+  background-color: var(--color-button-secondary);
+}
+
+#card-third .card-button {
+  background-color: var(--color-button-accent);
+}
+
+#card-fourth .card-button {
+  background-color: var(--color-button-primary);
+}
+
+.card-button:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  border: 2px solid currentColor;
+}
+
+/* Typography */
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: stretch;
+}
+
+
+/* Toggle Switch avec Font Awesome */
+#language-toggle {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-left: 20px;
+}
+
+#language-toggle:hover {
+  color: var(--color-primary);
+}
+
+/* Indicateur de langue */
+#language-toggle::after {
+  content: "FR";
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 0.8rem;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+html[lang="en"] #language-toggle::after {
+  content: "EN";
+}
