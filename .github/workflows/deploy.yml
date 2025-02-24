@@ -42,6 +42,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           publish_dir: ./_site
-          keep_files: true  # IMPORTANT : évite que GitHub efface ton fichier CNAME
+          keep_files: true
+          external_repository: nabsh/blog
+          publish_branch: gh-pages
