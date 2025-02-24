@@ -1,0 +1,19 @@
+---
+title: "Allo le monde !"
+description: |
+    Un premier post avec Quarto !
+date: "2024-12-24"
+lang: fr
+categories:
+  - news
+code-fold: true
+draft: false
+freeze: true
+appendix-style: none #(default, plain, none)
+#bibliography: ../library.bib
+---
+
+Salut ! Hello World ! 
+
+
+![](picture.jpg){width="508"}

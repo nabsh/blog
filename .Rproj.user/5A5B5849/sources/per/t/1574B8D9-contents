@@ -1,0 +1,23 @@
+---
+title: "Bienvenue !"
+title-block-banner: false
+format: 
+  html:
+    css: style.css
+---
+
+<div class="rectangle rectangle-1">
+  <div class="text-content">
+    <h2>À propos</h2>
+    <p>A propos de moi, d'où je viens, qui je suis, vers où je vais (en fait non, pas cela).</p>
+  </div>
+  <a href="about.html" class="button">A propos</a>
+</div>
+<div class="rectangle rectangle-2">
+  <div class="text-content">
+    <h2>Posts</h2>
+    <p>Parfois j'écris des posts. Certains sont bien, d'autres moins.</p>
+  </div>
+  <a href="blog.html" class="button">Posts</a>
+</div>
+{=html}

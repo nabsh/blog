@@ -1,0 +1,51 @@
+// Créer le switch et l'ajouter à la barre de navigation
+function createLanguageSwitch() {
+  const navbar = document.querySelector('.navbar-collapse'); // Cible la partie droite de la navbar
+  if (!navbar) return;
+
+  const switchHTML = `
+    <div class="language-switch-container" style="margin-left: 20px;">
+      <label class="language-switch">
+        <input type="checkbox" id="language-toggle">
+        <span class="slider round"></span>
+        <span class="labels" data-on="EN" data-off="FR"></span>
+      </label>
+    </div>
+  `;
+
+  navbar.insertAdjacentHTML('beforeend', switchHTML);
+}
+
+// Détecter la langue actuelle
+function detectCurrentLang() {
+  const path = window.location.pathname;
+  return path.includes('.en.') ? 'en' : 'fr'; // Adapte selon tes URLs
+}
+
+// Synchroniser le switch
+function syncLanguageToggle() {
+  const currentLang = detectCurrentLang();
+  const toggle = document.getElementById('language-toggle');
+  if (toggle) toggle.checked = currentLang === 'en';
+}
+
+// Redirection
+function handleLanguageSwitch() {
+  const toggle = document.getElementById('language-toggle');
+  if (!toggle) return;
+
+  toggle.addEventListener('change', function() {
+    const currentPage = window.location.href;
+    const newUrl = currentPage.includes('.en.')
+      ? currentPage.replace('.en.', '.')
+      : currentPage.replace('.', '.en.');
+    window.location.href = newUrl;
+  });
+}
+
+// Initialiser
+document.addEventListener('DOMContentLoaded', () => {
+  createLanguageSwitch();
+  syncLanguageToggle();
+  handleLanguageSwitch();
+});

@@ -1,0 +1,4 @@
+parent_dir <-"D:\\Nextcloud"
+project_dir <- "Blog"
+babelquarto::render_website(file.path(parent_dir, project_dir))
+servr::httw(file.path(parent_dir, project_dir, "_site"))

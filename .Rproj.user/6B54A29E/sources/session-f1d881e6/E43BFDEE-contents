@@ -1,0 +1,38 @@
+name: Deploy Quarto site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: "latest"
+
+      - name: Install Pandoc (nécessaire pour Quarto)
+        run: sudo apt-get install pandoc
+
+      - name: Install Dependencies (R and Python)
+        run: |
+          Rscript -e 'install.packages("rmarkdown", repos="https://cloud.r-project.org/")' || true
+          python -m pip install --upgrade pip
+          python -m pip install jupyter || true  # Si tu utilises des notebooks
+
+      - name: Render Quarto Project
+        run: Rscript -e 'babelquarto::render_website()'
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          keep_files: true  # IMPORTANT : évite que GitHub efface ton fichier CNAME

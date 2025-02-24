@@ -1,0 +1,96 @@
+/* Couleurs principales */
+$primary-color: #D4006A; /* Rose */
+$second-color: #6A00D4; /* Violet */
+$third-color: #006AD4; /* Bleu */
+
+/* Styles des cartes */
+#card-first-color {
+  background-color: #fff;
+  border: 4px solid $primary-color;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+#card-second-color {
+  background-color: #fff;
+  border: 4px solid $second-color;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+#card-third-color {
+  background-color: #fff;
+  border: 4px solid $third-color;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+/* Liens dans les cartes */
+.card-link {
+  background-color: $primary-color;
+  color: #fff;
+  border: 4px solid $primary-color;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card-link:hover {
+  background-color: #fff;
+  color: $primary-color;
+  border-color: $primary-color;
+}
+
+.second-color-link {
+  background-color: $second-color;
+  border-color: $second-color;
+  color: #fff;
+}
+
+.second-color-link:hover {
+  background-color: #fff;
+  color: $second-color;
+  border-color: $second-color;
+}
+
+.third-color-link {
+  background-color: $third-color;
+  border-color: $third-color;
+  color: #fff;
+}
+
+.third-color-link:hover {
+  background-color: #fff;
+  color: $third-color;
+  border-color: $third-color;
+}
+
+/* Générale pour les cartes */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-text {
+  font-size: 18px;
+  color: #333;
+}
+
+.heading-font {
+  font-weight: bold;
+}

@@ -1,0 +1,37 @@
+---
+title: "Bienvenue !"
+title-block-banner: false
+format: 
+  html:
+    css: styles.css
+---
+
+::: {.grid}
+
+::: {.g-col-12}
+# Bienvenue sur mon site !
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card h-100 #card-first-color}
+::: {.card-body d-flex flex-column}
+À propos de moi, mes intérêts, et mon travail en tant que chercheur.
+
+:::{style="margin-top: auto;"}
+[À PROPOS](about.html){.card-link heading-font}
+:::
+:::
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.card h-100 #card-second-color}
+::: {.card-body d-flex flex-column}
+J'écris parfois des articles sur des projets et des réflexions.
+
+:::{style="margin-top: auto;"}
+[ARTICLES](posts.html){.card-link second-color-link heading-font}
+:::
+:::
+:::
+:::

@@ -1,0 +1,18 @@
+---
+title: "Hello Word !"
+description: |
+    First post from Quarto blog !
+date: "2024-12-24"
+lang: fr
+categories:
+  - news
+code-fold: true
+draft: false
+freeze: true
+appendix-style: none #(default, plain, none)
+#bibliography: ../library.bib
+---
+
+Ow ! Hello World !
+
+![](picture.jpg){width="508"}

@@ -1,0 +1,19 @@
+---
+title: "Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: table
+  fields: [date, title, reading-time]
+  categories: true
+  sort-ui: false
+  filter-ui: true
+  include:
+    lang: en
+  feed: true
+page-layout: full
+title-block-banner: false
+---
+  
+  ## Derniers Posts
+  

@@ -1,0 +1,48 @@
+project:
+  type: website
+
+website:
+  site-url: https://example.com
+  title: "Nabil Sheikh Hassan"
+  description: "Nabil Sheikh Hassan, page perso"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: About
+        href: about.qmd
+      - text: "{{< iconify fa6-brands linkedin >}}"
+        href: "https://be.linkedin.com/in/nabil-sheikh-hassan-a9701943"
+      - text: "{{< iconify fa6-brands bluesky >}}"
+        href: "https://bsky.app/profile/nabsheikhhassan.bsky.social"
+      - text: "{{< iconify ai google-scholar >}}"
+        href: "https://scholar.google.be/citations?user=JQd40mQAAAAJ&hl=en"
+  page-footer:
+    border: true
+    left: "2024"
+    center: 
+      - text: Licence CC BY-NC-ND 4.0.
+    right: "made with ︎♥️ & [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme: zephyr
+    css: styles.css
+    toc: true
+
+
+
+
+babelquarto:
+  languagelinks: navbar
+  languagecodes:
+  - name: en
+    text: "English"
+  - name: fr
+    text: "Français"
+  mainlanguage: 'fr'
+  languages: ['en']
+title-en: Nabil Sheikh Hassan
+description-en: personal webpage
+author-en: Nabil Sheikh Hassan
+lang: fr
