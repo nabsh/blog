@@ -3,6 +3,7 @@ title: "Nabil Sheikh Hassan"
 subtitle: |
   Economist, but nice.
 image: /assets/images/me.jpg
+lang: en
 about:
   id: edu-exp
   template: jolla

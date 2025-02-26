@@ -1,5 +1,6 @@
 ---
 title: "Blog"
+lang: fr
 listing:
   contents: posts
   sort: "date desc"

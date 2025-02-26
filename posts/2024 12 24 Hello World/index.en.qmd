@@ -3,7 +3,7 @@ title: "Hello Word !"
 description: |
     First post from Quarto blog !
 date: "2024-12-24"
-lang: fr
+lang: en
 categories:
   - news
 code-fold: true
