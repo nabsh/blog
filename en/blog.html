@@ -64,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-date','listing-title','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -160,8 +160,12 @@ window.Quarto = {
   <ul>
 <li><a href="#last-posts" id="toc-last-posts" class="nav-link active" data-scroll-target="#last-posts">Last Posts</a></li>
   </ul></nav><h5 class="quarto-listing-category-title">Categories</h5>
-<div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span>
-</div></div>
+<div class="quarto-listing-category category-default">
+<div class="category" data-category="">All <span class="quarto-category-count">(1)</span>
+</div>
+<div class="category" data-category="news">news <span class="quarto-category-count">(1)</span>
+</div>
+</div>
 </div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
@@ -202,7 +206,17 @@ Title
 Reading Time
 </th>
 </tr></thead>
-<tbody class="list"></tbody>
+<tbody class="list"><tr data-index="0" data-categories="news" data-listing-date-sort="1734998400000" data-listing-file-modified-sort="1740572972087" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="5" data-listing-title-sort="Hello Word !" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Dec 24, 2024</span>
+</td>
+<td>
+<a href="./posts/2024%2012%2024%20Hello%20World/index.html" class="title listing-title">Hello Word !</a>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+</tr></tbody>
 </table>
 <div class="listing-no-matching d-none">
 No matching items
