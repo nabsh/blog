@@ -20,9 +20,6 @@ website:
       - text: "{{< iconify fa6-brands:google-scholar >}}"
         href: "https://scholar.google.be/citations?user=JQd40mQAAAAJ&hl=en"
         aria-label: "Google Scholar"
-      - text: "{{< iconify fa:language >}}"
-        href: "#"
-        id: language-toggle
   page-footer:
     border: true
     left: "2025"
@@ -33,10 +30,7 @@ format:
     theme: zephyr
     css: styles.css
     toc: true
-    include-after-body: language-toggle.html
-
 babelquarto:
-  languagelinks: none
   languagecodes:
   - name: en
     text: "EN"
