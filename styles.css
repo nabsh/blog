@@ -1,16 +1,5 @@
-/* Custom CSS for Quarto Home Page Rectangles */
-
 /* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lora:wght@400;700&display=swap');
-
-/* Font Settings */
-body {
-  font-family: 'Lora', serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fjalla One', sans-serif;
-}
 
 /* Nouvelle palette de couleurs */
 :root {
@@ -21,37 +10,46 @@ h1, h2, h3, h4, h5, h6 {
   --color-text: #2e2e2e; /* Gris très foncé */
   --color-light: #ffffff; /* Blanc */
   --color-dark: #1a1a1a; /* Noir profond */
-
-  /* Couleurs supplémentaires pour les cartes et boutons */
-  --color-card-border: #588b8b;
-  --color-button-primary: #588b8b;
-  --color-button-secondary: #c8553d;
-  --color-button-accent: #ffd166;
+  --color-card-border: #588b8b; /* Bordure des cartes */
+  --color-button-primary: #588b8b; /* Couleur primaire des boutons */
+  --color-button-secondary: #c8553d; /* Couleur secondaire des boutons */
+  --color-button-accent: #ffd166; /* Couleur d'accent des boutons */
 }
 
-/* Appliquer la nouvelle palette au body */
+/* Base Styles */
 body {
+  font-family: 'Lora', serif;
   color: var(--color-text);
   background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', sans-serif;
 }
 
 /* Navbar Styling */
 .navbar {
   font-family: 'Fjalla One', sans-serif;
-  background-color: var(--color-light); /* Fond blanc */
+  background-color: var(--color-light) !important; /* Fond blanc */
   border-bottom: 3px solid var(--color-primary); /* Ligne de séparation en couleur primaire */
   padding: 10px;
   color: var(--color-text);
 }
 
-.navbar a {
-  color: var(--color-text); /* Texte en couleur foncée */
+.navbar a, .navbar .nav-link {
+  color: var(--color-text) !important; /* Texte en couleur foncée */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.navbar a:hover {
-  color: var(--color-primary); /* Couleur au survol */
+.navbar a:hover, .navbar .nav-link:hover {
+  color: var(--color-primary) !important; /* Couleur au survol */
+}
+
+.navbar .active {
+  color: var(--color-secondary) !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* Style pour l'icône du menu mobile (hamburger icon) */
@@ -153,26 +151,52 @@ a:hover {
 }
 
 
-/* Toggle Switch avec Font Awesome */
-#language-toggle {
-  cursor: pointer;
-  transition: color 0.3s ease;
-  margin-left: 20px;
+/* Surcharge du bouton dropdown (toggle) */
+.dropdown-toggle {
+  background-color: var(--color-light) !important;
+  border: 1px solid var(--color-dark) !important;
+  color: var(--color-dark) !important;
+  padding: 0.5em 0.8em !important;
+  border-radius: 4px !important;
+  white-space: nowrap;
 }
 
-#language-toggle:hover {
-  color: var(--color-primary);
+/* Surcharge du menu dropdown */
+.dropdown-menu {
+  background-color: var(--color-light) !important;
+  border: 1px solid var(--color-dark) !important;
+  color: var(--color-dark) !important;
 }
 
-/* Indicateur de langue */
-#language-toggle::after {
-  content: "FR";
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 0.8rem;
-  margin-left: 8px;
-  vertical-align: middle;
+/* Surcharge des éléments du menu dropdown */
+.dropdown-menu .dropdown-item {
+  color: var(--color-dark) !important;
+  padding: 0.5em 1em;
 }
 
-html[lang="en"] #language-toggle::after {
-  content: "EN";
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  background-color: var(--color-primary) !important;
+  color: var(--color-light) !important;
+}
+
+
+/* ===============================
+   OVERRIDES POUR LA BARRRE DE RECHERCHE
+   =============================== */
+
+/* Bouton de recherche (loupe) */
+.aa-DetachedSearchButton {
+  background-color: var(--color-light) !important;
+  border: none !important;
+}
+
+/* Icone de la recherche */
+.aa-DetachedSearchButton .aa-DetachedSearchButtonIcon {
+  color: var(--color-dark) !important;
+}
+
+/* Forcer l'icône de la barre de recherche (SVG) à apparaître en noir */
+.aa-DetachedSearchButton svg {
+  filter: brightness(0) saturate(100%) !important;
 }

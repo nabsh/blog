@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "posts/2024 12 24 Hello World/index.html",
-    "href": "posts/2024 12 24 Hello World/index.html",
-    "title": "Hello Word !",
-    "section": "",
-    "text": "Ow ! Hello World !"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -19,5 +12,12 @@
     "title": "Nabil Sheikh Hassan",
     "section": "",
     "text": "I am currently a PhD student in Economics at IRES (UCLouvain) and a teaching assistant at FOPES (UCLouvain). My research focuses on the economics of inequalities: I am currently working on quantifying the evolution of income inequalities in Belgium, using Distributional National Accounts. I also teach a course at the Haute École ISFSC in Brussels.\n  \n\n\n\n\n\n\nAbout me, my interests, and my work as a researcher..\n\nÀ propos\n\n\n\n\n\nI sometimes write articles about projects and thoughts.\n\nBlog"
+  },
+  {
+    "objectID": "posts/2024 12 24 Hello World/index.html",
+    "href": "posts/2024 12 24 Hello World/index.html",
+    "title": "Hello Word !",
+    "section": "",
+    "text": "Ow ! Hello World !"
   }
 ]
