@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/posts/2024 12 24 Hello World/index.html</loc>
+    <loc>https://blog.sheikhhassan.com/posts/2024 12 24 Hello World/index.html</loc>
     <lastmod>2024-12-24T17:16:33.000Z</lastmod>
   </url>
   <url>
-    <loc>https://example.com/blog.html</loc>
+    <loc>https://blog.sheikhhassan.com/blog.html</loc>
     <lastmod>2025-02-26T12:24:18.051Z</lastmod>
   </url>
   <url>
-    <loc>https://example.com/about.html</loc>
+    <loc>https://blog.sheikhhassan.com/about.html</loc>
     <lastmod>2025-02-26T12:25:36.747Z</lastmod>
   </url>
   <url>
-    <loc>https://example.com/index.html</loc>
+    <loc>https://blog.sheikhhassan.com/index.html</loc>
     <lastmod>2025-02-26T12:24:26.541Z</lastmod>
   </url>
 </urlset>

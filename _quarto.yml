@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  site-url: https://example.com
+  site-url: https://blog.sheikhhassan.com
   title: "Home"
   description: "une page perso"
   navbar:
