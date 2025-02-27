@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/blog.html</loc>
-    <lastmod>2025-02-26T12:29:32.087Z</lastmod>
+    <loc>https://blog.sheikhhassan.com/blog.html</loc>
+    <lastmod>2025-02-27T11:58:02.317Z</lastmod>
   </url>
   <url>
-    <loc>https://example.com/about.html</loc>
-    <lastmod>2025-02-26T12:29:32.087Z</lastmod>
+    <loc>https://blog.sheikhhassan.com/about.html</loc>
+    <lastmod>2025-02-27T11:58:02.316Z</lastmod>
   </url>
   <url>
-    <loc>https://example.com/index.html</loc>
-    <lastmod>2025-02-26T12:29:32.087Z</lastmod>
+    <loc>https://blog.sheikhhassan.com/index.html</loc>
+    <lastmod>2025-02-27T11:58:02.317Z</lastmod>
   </url>
   <url>
-    <loc>https://example.com/posts/2024 12 24 Hello World/index.html</loc>
-    <lastmod>2025-02-26T12:29:32.087Z</lastmod>
+    <loc>https://blog.sheikhhassan.com/posts/2024 12 24 Hello World/index.html</loc>
+    <lastmod>2025-02-27T11:58:02.317Z</lastmod>
   </url>
 </urlset>

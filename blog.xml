@@ -6,27 +6,27 @@
       version="2.0">
 <channel>
 <title>Home</title>
-<link>https://example.com/blog.html</link>
-<atom:link href="https://example.com/blog.xml" rel="self" type="application/rss+xml"/>
+<link>https://blog.sheikhhassan.com/blog.html</link>
+<atom:link href="https://blog.sheikhhassan.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>une page perso</description>
 <generator>quarto-1.4.552</generator>
 <lastBuildDate>Tue, 24 Dec 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Allo le monde !</title>
-  <link>https://example.com/posts/2024 12 24 Hello World/</link>
+  <link>https://blog.sheikhhassan.com/posts/2024 12 24 Hello World/</link>
   <description><![CDATA[ 
 
 
 
 
 <p>Salut ! Hello World !</p>
-<p><img src="https://example.com/posts/2024 12 24 Hello World/picture.jpg" class="img-fluid" width="508"></p>
+<p><img src="https://blog.sheikhhassan.com/posts/2024 12 24 Hello World/picture.jpg" class="img-fluid" width="508"></p>
 
 
 
  ]]></description>
   <category>news</category>
-  <guid>https://example.com/posts/2024 12 24 Hello World/</guid>
+  <guid>https://blog.sheikhhassan.com/posts/2024 12 24 Hello World/</guid>
   <pubDate>Tue, 24 Dec 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>
