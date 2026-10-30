@@ -19,6 +19,7 @@
   genre: Article scientifique
   venue: Review of Income and Wealth
   description: "71(4). Avec B. Capéau, A. Decoster, S. Van Houtven, J. Vanderkelen et K. Wolfs."
+  path: "https://onlinelibrary.wiley.com/doi/10.1111/roiw.70035"
 
 - title: "Inégalités : mieux quantifier pour mieux redistribuer"
   date: 2024-02-15
@@ -31,13 +32,6 @@
   genre: Article
   venue: Revue Politique
   path: "https://www.revuepolitique.be/convergence-des-gauches-es-tu-deja-la/"
-
-- title: "L’avenir du communisme"
-  date: 2023-04-20
-  genre: Dossier coordonné
-  venue: Revue Politique, n° 122
-  description: "Avec Thibault Scohier et Pierre-Étienne Vandamme."
-  path: "https://www.revuepolitique.be/revue/lavenir-du-communisme/"
 
 - title: "Patrimoines belges : bienvenue dans un désert statistique"
   date: 2023-12-01
