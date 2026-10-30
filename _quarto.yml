@@ -38,5 +38,7 @@ format:
     lightbox: auto
     smooth-scroll: true
     link-external-newwindow: true
+    # Liens internes : le domaine en http ou https (sinon ils s'ouvrent dans un nouvel onglet)
+    link-external-filter: '^https?:\/\/blog\.sheikhhassan\.com'
     anchor-sections: false
     code-copy: true
