@@ -91,7 +91,8 @@
 
   // Portrait tramé : points des deux encres, légèrement décalés
   function renderPortrait() {
-    var box = document.querySelector('.portrait'); if (!box) return;
+    // Trame seulement si le portrait la demande (classe .trame) : la photo s'affiche telle quelle sinon
+    var box = document.querySelector('.portrait.trame'); if (!box) return;
     var img = box.querySelector('img'), old = box.querySelector('canvas');
     if (old) old.remove();
     img.style.display = '';

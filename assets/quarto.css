@@ -291,3 +291,9 @@ code { color: inherit; font-family: var(--font-code); }
 .subscribe .rss-links svg { width: 14px; height: 14px; }
 .subscribe .rss-links a { color: var(--sub-ink); text-decoration-color: var(--accent-2); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .subscribe .rss-links a:hover { color: var(--sub-h2); }
+
+/* Portrait : la photo telle quelle, cadre d'encre et ombre rose comme les cartes */
+.portrait { background: none; border: 2.5px solid var(--frame); box-shadow: 7px 7px 0 var(--accent-2); overflow: hidden; }
+.portrait img { filter: none; mix-blend-mode: normal; }
+.portrait::after { display: none; }
+[data-theme="dark"] .portrait { box-shadow: 7px 7px 0 rgba(236,130,185,.45); }
