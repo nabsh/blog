@@ -297,3 +297,9 @@ code { color: inherit; font-family: var(--font-code); }
 .portrait img { filter: none; mix-blend-mode: normal; }
 .portrait::after { display: none; }
 [data-theme="dark"] .portrait { box-shadow: 7px 7px 0 rgba(236,130,185,.45); }
+
+/* Abonnement : message de confirmation et mention sur les données */
+.subscribe .sub-msg { margin: 4px 0 0; font-weight: 700; color: var(--sub-ink); }
+.subscribe .sub-legal { margin: 12px 0 0; font-size: 13px; color: var(--sub-muted, var(--muted)); }
+.subscribe form[hidden] { display: none; }
+.subscribe button:disabled { opacity: .6; cursor: wait; }

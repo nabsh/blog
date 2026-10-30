@@ -82,6 +82,28 @@
     });
   }
 
+  // Abonnement : envoi à Kit sans quitter la page (sans JavaScript, le formulaire part directement chez Kit)
+  document.querySelectorAll('form.kit-form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      if (!window.fetch) return;
+      e.preventDefault();
+      var msg = form.parentNode.querySelector('.sub-msg'), btn = form.querySelector('button');
+      btn.disabled = true;
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json().catch(function () { return {}; }); })
+        .then(function () {
+          form.hidden = true;
+          msg.textContent = 'Presque fini : un mail de confirmation vient de partir. Clique sur le lien qu’il contient pour valider ton abonnement.';
+          msg.hidden = false;
+        })
+        .catch(function () {
+          btn.disabled = false;
+          msg.textContent = 'L’inscription n’a pas abouti. Réessaie dans un instant.';
+          msg.hidden = false;
+        });
+    });
+  });
+
   // Barre de lecture
   var prog = document.querySelector('.progress span');
   if (prog) {
