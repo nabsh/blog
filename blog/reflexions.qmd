@@ -1,6 +1,6 @@
 ---
 pagetitle: "Réflexions"
-description: "Des textes plus libres : lectures, enseignement, engagements."
+description: "Des textes plus libres, sur ce que je lis, ce que j'enseigne ou ce qui me trotte dans la tête."
 listing:
   id: billets
   contents: "../posts/*/index.qmd"
@@ -16,7 +16,7 @@ listing:
 ::: {.page-head data-rub="ref"}
 # Réflexions
 
-Des textes plus libres : lectures, enseignement, engagements.
+Des textes plus libres, sur ce que je lis, ce que j'enseigne ou ce qui me trotte dans la tête.
 
 ```{=html}
 <nav class="filters" aria-label="Rubriques">

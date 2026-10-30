@@ -14,7 +14,7 @@ listing:
 ::: {.page-head}
 # Blog
 
-Des billets longs et des notes plus brèves, rangés en trois rubriques. Chaque rubrique a son flux RSS et, bientôt, sa newsletter.
+Tous les billets, des plus longs aux plus brefs, rangés en trois rubriques.
 
 ```{=html}
 <nav class="filters" aria-label="Rubriques">

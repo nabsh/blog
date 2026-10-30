@@ -1,6 +1,6 @@
 ---
 pagetitle: "Nabil Sheikh Hassan"
-description: "Billets d'économie, écrits et cours de Nabil Sheikh Hassan."
+description: "Le carnet public de réflexions de Nabil Sheikh Hassan, économiste : inégalités, fiscalité et travail en Belgique."
 listing:
   - id: derniers
     contents: posts

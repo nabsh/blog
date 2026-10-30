@@ -1,6 +1,6 @@
 ---
 pagetitle: "Méthodes"
-description: "Comment on compte : données, outils, code. Certains billets sont en anglais."
+description: "Comment on compte : données, outils, code. Parfois en anglais."
 listing:
   id: billets
   contents: "../posts/*/index.qmd"
@@ -16,7 +16,7 @@ listing:
 ::: {.page-head data-rub="met"}
 # Méthodes
 
-Comment on compte : données, outils, code. Certains billets sont en anglais.
+Comment on compte : données, outils, code. Parfois en anglais.
 
 ```{=html}
 <nav class="filters" aria-label="Rubriques">

@@ -1,6 +1,6 @@
 ---
 pagetitle: "Économie"
-description: "Budget, fiscalité, inégalités, marché du travail : l'économie belge en chiffres et en débats."
+description: "Budget, impôts, inégalités, travail : surtout la Belgique, avec des chiffres."
 listing:
   id: billets
   contents: "../posts/*/index.qmd"
@@ -16,7 +16,7 @@ listing:
 ::: {.page-head data-rub="eco"}
 # Économie
 
-Budget, fiscalité, inégalités, marché du travail : l'économie belge en chiffres et en débats.
+Budget, impôts, inégalités, travail : surtout la Belgique, avec des chiffres.
 
 ```{=html}
 <nav class="filters" aria-label="Rubriques">

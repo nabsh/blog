@@ -14,7 +14,7 @@ listing:
 ::: {.page-head}
 # Écrits
 
-Ce que j'ai publié ailleurs : dans la *Revue Politique* et la *Revue Démocratie*, et dans des revues scientifiques. Les liens mènent au texte d'origine.
+Ce que j'ai publié ailleurs, dans la *Revue Politique*, la *Revue Démocratie* ou des revues scientifiques. Les liens mènent au texte d'origine.
 :::
 
 ::: {#liste-ecrits}

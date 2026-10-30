@@ -7,7 +7,7 @@ description: "Les cours que je donne et que j'ai donnés."
 ::: {.page-head}
 # Cours
 
-Les cours que je donne en ce moment et ceux que j'ai donnés. Les supports (notes de cours, slides) seront mis en ligne cours par cours, chacun dans sa page.
+Les cours que je donne, et ceux que j'ai donnés. Les supports arriveront ici, petit à petit.
 :::
 
 ::: {.block .page-body}
