@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: _site
+  post-render: scripts/titres-flux.py
+  render:
+    - "*.qmd"
+    - "blog/*.qmd"
+    - "posts/**/*.qmd"
+    - "!design/"
+    - "!cv/"
+  resources:
+    - assets/site.js
+    - assets/me.jpg
+    - assets/favicon.svg
+    - CNAME
+
+website:
+  title: "NSH"
+  description: "Billets d'économie, écrits et cours de Nabil Sheikh Hassan."
+  site-url: https://blog.sheikhhassan.com
+  favicon: assets/favicon.svg
+  open-graph: true
+  google-analytics:
+    tracking-id: "G-EZJ05JF1FQ"
+    anonymize-ip: true
+  # Consentement explicite (RGPD) : Analytics ne se charge qu'après « Accepter »
+  cookie-consent:
+    type: express
+    style: simple
+    palette: light
+    language: fr
+
+lang: fr
+date-format: "D MMMM YYYY"
+
+format:
+  html:
+    theme: default
+    css:
+      - assets/nsh.css
+      - assets/quarto.css
+    page-layout: custom
+    title-block-style: none
+    include-in-header: assets/head.html
+    include-before-body: assets/header.html
+    include-after-body: assets/footer.html
+    lightbox: auto
+    smooth-scroll: true
+    link-external-newwindow: true
+    anchor-sections: false
+    code-copy: true

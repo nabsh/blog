@@ -1,0 +1,13 @@
+<% let year = null; %>
+<% for (const item of items) { const y = item.date ? String(item.date).trim().split(' ').pop() : ''; const m = parseInt(item['reading-time']) || 0; %>
+<% if (y !== year) { year = y; %><h2 class="year"><%= y %></h2><% } %>
+<article class="post-row" data-rub="<%= item.rub || 'eco' %>" <%= metadataAttrs(item) %>>
+<div class="when"><%= item.date %></div>
+<div>
+<div class="meta"><span class="rub"><%= item.rubrique %></span></div>
+<a class="t" href="<%- item.path %>"><%= item.title %></a>
+<% if (item.description) { %><p><%= item.description %></p><% } %>
+<% if (m) { %><span class="readtime"><%= m %> min de lecture</span><% } %>
+</div>
+</article>
+<% } %>

@@ -1,0 +1,22 @@
+---
+pagetitle: "Écrits"
+description: "Articles, dossiers et publications scientifiques parus ailleurs."
+listing:
+  id: liste-ecrits
+  contents: ecrits.yml
+  sort: "date desc"
+  date-format: "YYYY"
+  template: assets/listing-ecrits.ejs
+  fields: [title, date, genre, venue, description, path]
+---
+
+::: {.wrap}
+::: {.page-head}
+# Écrits
+
+Ce que j'ai publié ailleurs : dans la *Revue Politique* et la *Revue Démocratie*, et dans des revues scientifiques. Les liens mènent au texte d'origine.
+:::
+
+::: {#liste-ecrits}
+:::
+:::

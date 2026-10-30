@@ -1,0 +1,37 @@
+---
+pagetitle: "Réflexions"
+description: "Des textes plus libres : lectures, enseignement, engagements."
+listing:
+  id: billets
+  contents: "../posts/*/index.qmd"
+  sort: "date desc"
+  include:
+    rubrique: "Réflexions"
+  template: ../assets/listing-rows.ejs
+  fields: [title, date, description, reading-time, rubrique, rub, categories]
+  feed: true
+---
+
+::: {.wrap}
+::: {.page-head data-rub="ref"}
+# Réflexions
+
+Des textes plus libres : lectures, enseignement, engagements.
+
+```{=html}
+<nav class="filters" aria-label="Rubriques">
+  <a class="chip" href="/blog.html">Tout</a>
+  <a class="chip" href="/blog/economie.html">Économie</a>
+  <a class="chip" href="/blog/reflexions.html" aria-current="page">Réflexions</a>
+  <a class="chip" href="/blog/methodes.html">Méthodes</a>
+</nav>
+```
+:::
+
+::: {#billets}
+:::
+
+::: {.block}
+{{< include ../assets/_subscribe.md >}}
+:::
+:::

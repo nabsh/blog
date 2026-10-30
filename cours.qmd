@@ -1,0 +1,36 @@
+---
+pagetitle: "Cours"
+description: "Les cours que je donne et que j'ai donnés."
+---
+
+::: {.wrap}
+::: {.page-head}
+# Cours
+
+Les cours que je donne en ce moment et ceux que j'ai donnés. Les supports (notes de cours, slides) seront mis en ligne cours par cours, chacun dans sa page.
+:::
+
+::: {.block .page-body}
+```{=html}
+<h2 class="year">En ce moment</h2>
+```
+
+```{=html}
+<ul class="timeline">
+  <li><span class="y">Depuis 2020</span><div><b>Économie politique</b><span>Haute École ISFSC · 1re bachelier</span></div></li>
+  <li><span class="y">Depuis 2020</span><div><b>Économie sociale et solidaire</b><span>Haute École ISFSC · 3e bachelier</span></div></li>
+  <li><span class="y">En cours</span><div><b>Travaux de préparation au mémoire (LOPES2202 et LOPES2203)</b><span>UCLouvain, FOPES · Master 1 et master 2</span></div></li>
+</ul>
+```
+
+```{=html}
+<h2 class="year">Avant</h2>
+```
+
+```{=html}
+<ul class="timeline">
+  <li><span class="y">2022 – 2023</span><div><b>Histoire et courants de pensée en économie</b><span>UCLouvain · LOPES1310 · suppléance</span></div></li>
+</ul>
+```
+:::
+:::

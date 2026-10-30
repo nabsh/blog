@@ -1,0 +1,52 @@
+---
+title: "Scénarios de hausse de la TVA en Belgique"
+date: 2026-02-10
+description: "Impacts distributifs de divers scénarios de hausse de TVA en Belgique (morning-after effects)."
+rubrique: Économie
+rub: eco
+categories: [De Wever, fiscalité, Belgique, TVA, budget]
+substack: "https://cashcashsardine.substack.com/p/scenarios-de-hausse-de-la-tva-en"
+image: images/fig-1.png
+---
+
+En novembre 2025, le gouvernement fédéral de Bart de Wever a accouché dans la douleur d’un budget pour l’année 2026. Dans le volet recettes, il y figurait une mesure de hausse de la TVA de 6 à 12% pour certains produits (culture et plats à emporter). Dans la tentative d’application de sa mesure, le gouvernement a tenté de préserver certains types de prestations culturelles de la hausse de la TVA. Il s’est aussi arraché les cheveux pour définir ce qu’était un plat à emporter. Le Conseil d’État est venu rappeler ce 5 février toutes les limites d’un exercice qui accouche de critères flous (et donc injustifiés) pour des taux différents pour une même gamme de produits[^1].
+
+Le premier ministre a donc acté le retour à la table des négociations pour retrouver le même montant (633 millions €) sur une base un peu plus rationnelle et légitime. On partira du principe ici que la voie suivie sera celle de la TVA. Sur la table, il y a deux grandes mesures “simples” :
+
+1.  La hausse du taux général de TVA de 21% à 22%. Le journal [Le Soir (10 février 2026)](https://www.lesoir.be/727827/article/2026-02-10/une-hausse-generalisee-de-la-tva-22-rapporterait-15-milliard-par) pointe une recette alors de 1,5 milliards €. Cette mesure est plutôt mise sur la table par Maxime Prévot (*Les Engagés*).
+
+2.  L’uniformisation du taux de 6% et 12% à 9%, mise en avant par le ministre du Budget, Vincent Van Peteghem (*CD&V).* Cette mesure est parfois accompagnée dans le débat public d’une promesse de baisse à 0% pour certains produits de base taxés aujourd’hui à 6% (pain, légumes et fruits).
+
+Ces discussions se font trop souvent sans **une idée des conséquences par niveau de revenus**. La TVA est un impôt régressif en pourcentage du revenus : plus on gagne, moins cet impôt pèse en pourcentage de ce qu’on gagne. Une hausse de la TVA est, selon les produits impactés, plus ou moins régressive.
+
+Grâce à un logiciel de micro-simulation (Euromod), il est possible de connaitre l’effet de ces hausses de TVA par décile de revenus. On classe les ménages par décile de revenus équivalents disponibles. Ils sont donc classés des plus pauvres aux plus riches après impôts et cotisations payées, et en corrigeant pour la taille des ménages.
+
+Les hypothèses sont les suivantes. On suppose que la hausse de la TVA est le seul changement. Les revenus n’ont pas évolué. Il n’y a pas d’indexation automatique des salaires ou allocations qui vient compenser la hausse de la TVA. On suppose une adaptation des prix consécutivement à la hausse/baisse de TVA. On suppose aussi qu’il n’y a pas d’adaptation du comportement des ménages : ils consomment la même quantité qu’avant la hausse. C’est un effet pur “que se passe-il le lendemain matin de la hausse ?”
+
+![[Version interactive](https://public.flourish.studio/visualisation/27585761/)](images/fig-1.png){fig-alt="Graphique 1 du billet"}
+
+Trois cas ont été envisagés : (1) la hausse de la TVA de 21 à 22%; (2) l’uniformisation des taux à 9%; (3) une uniformisation des taux, mais un passage à 0% pour le pain (COICOP 01.1.1.3), les fruits (COICOP 01.1.6) et les légumes (COICOP 01.1.7).
+
+Quels sont les **effets des différents scénarios** ?
+
+D’abord, sur le **rendement macro-économique** attendu : le premier scénario rapporterait 1 milliard € à l’État, le second 1,3 milliards et le dernier 660 millions €[^2].
+
+Ensuite, sur la **distribution de l’effort** (cf. graphique supra ou avec [plus de détails ici](https://public.flourish.studio/visualisation/27585761/)).
+
+- Le premier scénario est le **moins régressif** des trois, tout en l’état tout de même : le premier décile perd 0,52% de son revenu disponible mensuel (7,6 euros sur les 1468 €) quand le dernier décile perd 0,34% du revenu disponible (25,5€ sur 7605€). Le ménage moyen perd 0,42% de son revenu mensuel.
+
+- Le second scénario est le **plus régressif** des trois. Le premier décile perd presque 1% de son revenu disponible mensuel (14€) quand le dernier décile en perd 0,38% (29€). Le ménage moyen perd 0,56% de son revenu mensuel.
+
+- Le dernier scénario est plus régressif que le premier, mais moins que le second. Pour le premier décile, l’impact est similaire à la hausse de la TVA à 22%. Pour les déciles suivants et le dernier décile, la situation est meilleure dans ce cas-ci que dans la premier et second scénario. Le ménage moyen perdrait 0,27% de son revenu mensuel.
+
+Pour conclure, on manquera pas de rappeler deux **limites très importantes** à cet exercice (particulièrement pour les scénarios 2 et 3) et une piste de réflexion alternative.
+
+Première limite. Le choix politique d’une baisse de la TVA (que ce soit de 12 à 9%, ou de 6% à 0%) peut être inefficace sans contrôle explicite sur les prix ou mécanisme qui contraint cette baisse à se réaliser dans le prix de vente. Si les prix de vente ne s’adaptent pas à la baisse de la TVA, c’est le producteur qui risque de garder cela dans ses marges plutôt que le consommateur voir la facture baisser.
+
+Seconde limite. Les effets sont ici analysés sans modélisation de moyen ou long terme, où l’indexation des salaires et des allocations sociales rentrent en jeu. Il n’empêche que l’exercice a ceci d’intéressant : il montre très bien ce qu’il se passerait si aucun mécanisme protecteur (comme l’indexation) ne venait atténuer le choc initial.
+
+Une piste de réflexion enfin. Quitte à envisager une hausse de la fiscalité, le gouvernement serait inspiré de corriger (encore) les trous dans la raquette fiscale dans le haut de la distribution des revenus. Le passage en société a des effets néfastes en terme de justice fiscale et équité face à l’impôt. Un collectif d’économistes (Econosphères) a également publié une feuille de [route alternative pour l’élaboration d’un budget](https://www.econospheres.be/Budget-Trouver-40-milliards-sans-faire-payer-ceux-qui-ont-peu). Et en réduction de dépenses, la [Banque Nationale de Belgique](https://www.nbb.be/fr/actualites-et-evenements/actualites/les-subventions-aux-entreprises-sont-elles-elevees-en-belgique), comme [Econosphères](https://www.econospheres.be/La-Belgique-subventionne-t-elle-trop-ses-entreprises), ont pointé des milliards de subsides aux entreprises dont les effets retours ne sont pas toujours au rendez-vous.
+
+[^1]: Une analyse de l’avis du Conseil d’Etat est disponible [ici](https://blog.forumforthefuture.be/fr/article/sur-les-friscos-les-couques-du-dejeuner-et-les-sushis.-la-ratatouille-de-la-tva-retour-a-la-case-depart-/30079).
+
+[^2]: Euromod n’est pas un logiciel macro-économique de simulation. L’estimation de la hausse de 21 à 22% diverge donc ici avec les estimations de 1,5 milliards € fournies par le Soir sur base des données sur la table du gouvernement. Il n’empêche que l’exercice ici à un intérêt de voir ce que chaque mesure peut relativement amener comme recettes par rapport à une autre.

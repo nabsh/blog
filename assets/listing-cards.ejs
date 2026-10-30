@@ -1,0 +1,12 @@
+<div class="cards">
+<% for (const item of items) { const m = parseInt(item['reading-time']) || 0; %>
+<article class="card" data-rub="<%= item.rub || 'eco' %>" <%= metadataAttrs(item) %>>
+<div class="meta"><span class="rub"><%= item.rubrique %></span><span><%= item.date %></span></div>
+<a class="t" href="<%- item.path %>"><%= item.title %></a>
+<% if (item.description) { %><p><%= item.description %></p><% } %>
+<div class="card-foot">
+<% if (m) { %><span class="readtime"><%= m %> min de lecture</span><% } %>
+</div>
+</article>
+<% } %>
+</div>

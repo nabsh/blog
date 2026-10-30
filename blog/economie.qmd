@@ -1,0 +1,37 @@
+---
+pagetitle: "Économie"
+description: "Budget, fiscalité, inégalités, marché du travail : l'économie belge en chiffres et en débats."
+listing:
+  id: billets
+  contents: "../posts/*/index.qmd"
+  sort: "date desc"
+  include:
+    rubrique: "Économie"
+  template: ../assets/listing-rows.ejs
+  fields: [title, date, description, reading-time, rubrique, rub, categories]
+  feed: true
+---
+
+::: {.wrap}
+::: {.page-head data-rub="eco"}
+# Économie
+
+Budget, fiscalité, inégalités, marché du travail : l'économie belge en chiffres et en débats.
+
+```{=html}
+<nav class="filters" aria-label="Rubriques">
+  <a class="chip" href="/blog.html">Tout</a>
+  <a class="chip" href="/blog/economie.html" aria-current="page">Économie</a>
+  <a class="chip" href="/blog/reflexions.html">Réflexions</a>
+  <a class="chip" href="/blog/methodes.html">Méthodes</a>
+</nav>
+```
+:::
+
+::: {#billets}
+:::
+
+::: {.block}
+{{< include ../assets/_subscribe.md >}}
+:::
+:::

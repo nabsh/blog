@@ -1,0 +1,35 @@
+---
+pagetitle: "Blog"
+description: "Tous les billets, par rubrique."
+listing:
+  id: billets
+  contents: posts
+  sort: "date desc"
+  template: assets/listing-rows.ejs
+  fields: [title, date, description, reading-time, rubrique, rub, categories]
+  feed: true
+---
+
+::: {.wrap}
+::: {.page-head}
+# Blog
+
+Des billets longs et des notes plus brèves, rangés en trois rubriques. Chaque rubrique a son flux RSS et, bientôt, sa newsletter.
+
+```{=html}
+<nav class="filters" aria-label="Rubriques">
+  <a class="chip" href="/blog.html" aria-current="page">Tout</a>
+  <a class="chip" href="/blog/economie.html">Économie</a>
+  <a class="chip" href="/blog/reflexions.html">Réflexions</a>
+  <a class="chip" href="/blog/methodes.html">Méthodes</a>
+</nav>
+```
+:::
+
+::: {#billets}
+:::
+
+::: {.block}
+{{< include assets/_subscribe.md >}}
+:::
+:::

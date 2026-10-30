@@ -1,0 +1,7 @@
+# Réglages communs à tous les billets
+body-classes: billet
+title-block-style: default
+template-partials:
+  - ../assets/title-block.html
+author: Nabil Sheikh Hassan
+google-scholar: true

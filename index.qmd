@@ -1,0 +1,73 @@
+---
+pagetitle: "Nabil Sheikh Hassan"
+description: "Billets d'économie, écrits et cours de Nabil Sheikh Hassan."
+listing:
+  - id: derniers
+    contents: posts
+    sort: "date desc"
+    max-items: 3
+    template: assets/listing-cards.ejs
+    fields: [title, date, description, reading-time, rubrique, rub]
+  - id: ecrits-recents
+    contents: ecrits.yml
+    sort: "date desc"
+    max-items: 2
+    date-format: "YYYY"
+    template: assets/listing-mini.ejs
+    fields: [title, date, venue, path]
+---
+
+::: {.hero}
+::: {.wrap}
+# Salut, c'est Nabil ! {.hello}
+
+Je suis économiste, chercheur, enseignant à l'UCLouvain et l'ISFSC. Ce site, c'est un peu un carnet public de réflexions, sur les <mark class="hl">inégalités</mark>, la <mark class="hl">fiscalité</mark> et le <mark class="hl">travail</mark> en Belgique, et parfois d'autres sujets.
+:::
+:::
+
+```{=html}
+<div class="wrap"><hr class="orn"></div>
+```
+
+::: {.block}
+::: {.wrap}
+```{=html}
+<div class="section-head"><h2 class="section-title">Derniers billets</h2><a href="blog.html">Tous les billets →</a></div>
+```
+
+::: {#derniers}
+:::
+:::
+:::
+
+::: {.block}
+::: {.wrap .two-col}
+::: {.col}
+```{=html}
+<div class="section-head"><h2 class="section-title">Écrits récents</h2><a href="ecrits.html">Tous →</a></div>
+```
+
+::: {#ecrits-recents}
+:::
+:::
+
+::: {.col}
+```{=html}
+<div class="section-head"><h2 class="section-title">Cours en ce moment</h2><a href="cours.html">Tous →</a></div>
+```
+
+```{=html}
+<ul class="mini">
+  <li><b>Économie politique</b><span>ISFSC · 1re bachelier · depuis 2020</span></li>
+  <li><b>Économie sociale et solidaire</b><span>ISFSC · 3e bachelier · depuis 2020</span></li>
+</ul>
+```
+:::
+:::
+:::
+
+::: {.block}
+::: {.wrap}
+{{< include assets/_subscribe.md >}}
+:::
+:::

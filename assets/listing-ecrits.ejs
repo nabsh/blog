@@ -1,0 +1,11 @@
+<% let year = null; %>
+<% for (const item of items) { const y = String(item.date || '').trim(); %>
+<% if (y !== year) { year = y; %><h2 class="year"><%= y %></h2><% } %>
+<article class="ecrit-row" <%= metadataAttrs(item) %>>
+<div class="when"><%= item.genre %></div>
+<div>
+<% if (item.path) { %><a class="t ext" href="<%- item.path %>"><%= item.title %></a><% } else { %><span class="t"><%= item.title %></span><% } %>
+<p><span class="venue"><%= item.venue %></span><% if (item.description) { %> · <%= item.description %><% } %></p>
+</div>
+</article>
+<% } %>

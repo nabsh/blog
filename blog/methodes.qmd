@@ -1,0 +1,37 @@
+---
+pagetitle: "Méthodes"
+description: "Comment on compte : données, outils, code. Certains billets sont en anglais."
+listing:
+  id: billets
+  contents: "../posts/*/index.qmd"
+  sort: "date desc"
+  include:
+    rubrique: "Méthodes"
+  template: ../assets/listing-rows.ejs
+  fields: [title, date, description, reading-time, rubrique, rub, categories]
+  feed: true
+---
+
+::: {.wrap}
+::: {.page-head data-rub="met"}
+# Méthodes
+
+Comment on compte : données, outils, code. Certains billets sont en anglais.
+
+```{=html}
+<nav class="filters" aria-label="Rubriques">
+  <a class="chip" href="/blog.html">Tout</a>
+  <a class="chip" href="/blog/economie.html">Économie</a>
+  <a class="chip" href="/blog/reflexions.html">Réflexions</a>
+  <a class="chip" href="/blog/methodes.html" aria-current="page">Méthodes</a>
+</nav>
+```
+:::
+
+::: {#billets}
+:::
+
+::: {.block}
+{{< include ../assets/_subscribe.md >}}
+:::
+:::

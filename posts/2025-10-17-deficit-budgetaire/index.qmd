@@ -1,0 +1,118 @@
+---
+title: "Le déficit budgétaire belge, un mythe de Sisyphe de droite ou de gauche ?"
+date: 2025-10-17
+description: "Comme citoyen-ne, vous avez peut-être l’impression que le déficit belge est une sorte de Sisyphe budgétaire."
+rubrique: Économie
+rub: eco
+categories: []
+substack: "https://cashcashsardine.substack.com/p/le-deficit-budgetaire-belge-un-mythe-de-sisyphe-de-droite-ou-de-gauche"
+image: images/fig-1.png
+---
+
+Comme citoyen-ne, vous avez peut-être l’impression que le **déficit belge est une sorte de Sisyphe budgétaire.** Chaque coalition promet de pousser la pierre vers le Graal de l’équilibre des finances publiques ... puis elle retombe, et il faut tout recommencer. Et dans cette tragédie, un clivage politique semble être naturel : les partis de gauche seraient irresponsables et dépensiers, les partis de droite prévoyants et rigoureux. Cette analyse se propose de revisiter ce récit.
+
+> Est-il vrai que la Belgique passe sa vie à poursuivre l’équilibre budgétaire ? Les gouvernements de gauche et de droite se comportent-ils vraiment différemment face au déficit ?
+
+Pour répondre à ces questions, on va partir de la littérature économique pour ensuite examiner les données belges gouvernement par gouvernement. On observera :
+
+1.  la trajectoire belge sur le temps long
+
+2.  les efforts réalisés par chaque gouvernement
+
+3.  la manière dont ces efforts se décomposent en recettes et dépenses pour chaque gouvernement.
+
+En bref, l’idée n’est pas de savoir si la gauche est méchante et la droite gentille (ou l’inverse selon vos préférences). Dans ce mythe de Sisyphe, on va plutôt regarder la taille de la pierre, qui la pousse, comment, et à quel point elle retombe toujours en bas.
+
+## La gauche dépense, la droite assainit ? Vraiment ?
+
+Le poncif d’une gauche qui dépense et d’une droite qui assainit a été mis à l’épreuve des faits dans un article scientifique[^1]. Les auteurs posent une question simple : **qui, de la gauche ou de la droite, a tendance à accumuler plus de dette ?**
+
+La question n’est pas posée pour polémiquer. Les auteurs partent d’un constat : aux États-Unis comme en Europe, les périodes d’augmentation rapide de la dette ont souvent eu lieu sous des gouvernements de droite, alors que plusieurs gouvernements de gauche ont, eux, réduit les déficits. On peut penser récemment à Donald Trump où la dette américaine progresse plus vite que sous Biden ou Obama. En France, la dette augmente plus vite sous Macron qu’Hollande. Est-ce que cette intuition basée sur des exemples est vraie ? Il faut noter ici que ce n’est pas directement le déficit qui est analysé, mais la dette. Le lien entre les deux est néanmoins évident : un déficit oblige à emprunter et si les taux d’intérêt dépassent la croissance, la dette s’accumule mécaniquement.
+
+Pour expliquer ces différences, les auteurs posent une hypothèse : les électeurs de gauche ont une préférence forte pour les biens publics (santé, éducation, ...). Et ils souhaitent profiter de ces biens publics non seulement aujourd’hui, mais aussi dans le futur. Ces électeurs sont sensibles à la viabilité de l’État social, à ne pas laisser la dette filer, et donc favorables à un équilibre budgétaire à atteindre. A l’inverse, les électeurs de droite sont davantage sensibles à la consommation privée, donc sensibles aux réductions d’impôts. Si cette réduction d’impôts amène un déficit et plus tard de la dette, ce ne serait pas un drame puisque les biens publics et leur viabilité n’est pas leur priorité.
+
+Ensuite, les auteurs confrontent ces hypothèses et leur modèle avec des données empiriques de l’OCDE sur plusieurs décennies. Ils trouvent qu’**un glissement d’un gouvernement de gauche vers la droite augmente en moyenne la dette publique de 0,6 point de PIB par an**. Ils trouvent également qu’un gouvernement de gauche a tendance à plus creuser la dette en période de récession que la droite.
+
+Comme le relève l’économiste Xavier Rigot[^2] sur le même sujet, la gauche et la droite ne sont pas figés dans le temps ou comparables entre pays. Il existe également des exceptions historiques à tout ceci. Et la couleur politique ne peut pas s’affranchir du contexte : faire face à des longues périodes de récession est plus complexe qu’à des périodes de forte croissance. D’où l’intérêt pour la Belgique de prendre un peu de recul et examiner cela sur le temps long.
+
+## Belgique, malade chronique ?
+
+Depuis près d’un demi-siècle, le Belgique a connu de très longues périodes où les dépenses de l’État surpassaient les recettes. Le graphique suivant retrace cette trajectoire : recettes et dépenses (intérêts de la dette compris) en % du PIB, entre 1970 et 2025 (données AMECO), ainsi que les prévisions jusqu’à 2030 (Bureau fédéral du Plan).
+
+![[Version interactive](https://public.flourish.studio/visualisation/23200101/)](images/fig-1.png){fig-alt="Graphique 1 du billet"}
+
+On peut découper cela en plusieurs séquences :
+
+- **Années 70 - l’emballement.** Les chocs pétroliers provoquent une envolée des dépenses publiques alors que les recettes stagnent. Les finances publiques s’emballent et la dette publique s’installe comme un problème structurel.
+
+- **Années 80 - le coup de frein.** Les gouvernements Martens-Gol (alliance entre la droite libérale et le centre démocrate-chrétien) ont imposé une politique de réductions des dépenses, mais la dette et les charges d’intérêts restent élevés.
+
+- **Années 90 - la consolidation.** Les gouvernements Dehaene (alliance entre les socialistes et le centre démocrate-chrétien) ont poursuivi l’effort pour ramener l’État à un équilibre budgétaire. La pierre de Sisyphe est arrivée en haut de la montagne pour l’intégration européenne.
+
+- **Années 00 - l’accalmie.** Les gouvernements arc-en-ciel (socialistes, libéraux, verts) de Verhofstadt ont maintenu vaille que vaille cet équilibre budgétaire dans une conjoncture économique favorable.
+
+- **Années 08 - 12 - le retour des crises.** La crise financière de 2008 qui fait déraper les dépenses de l’État en % du PIB. Le gouvernement Di Rupo (socialiste-libéraux-chrétiens) stabilise la situation et la résorbe partiellement.
+
+- **Années 14-19 - le statu quo.** Le gouvernement Michel ne modifie pas tellement le déficit budgétaire.
+
+- **Années 2020 - les crises contre-attaquent.** Il s’en suit la crise du Covid 2019 qui fait à nouveau augmenter les dépenses avec des recettes qui ne bougent pas. Depuis, avec la guerre en Ukraine, les dépenses augmentent plus vite que les recettes creusant le déficit.
+
+Ce balayage rapide permet de se remémorer les dynamiques mais permet de mettre en avant deux éléments centraux. **D’une part, la seule période “dorée” budgétaire que nous avons connu est celle des gouvernements Verhofstadt.** Il semble relativement logique de ressentir une forme de mythe de Sisyphe du déficit. **D’autre part, les gouvernements, peu importe leur couleur politique, font face à des crises et/ou à leurs conséquences.** Il est impossible de juger de la qualité de leurs efforts sans mettre ces chiffres en regard avec la croissance économique.
+
+## Coalitions et réalités conjoncturelles
+
+Juger un gouvernement sur son solde de financement nominal est une erreur classique : une récession creuse mécaniquement le trou (le PIB recule, les recettes aussi, alors qu’au moment du choc les dépenses sont à minima stables). A l’inverse, les périodes de bonne croissance permettent au gouvernement d’améliorer les comptes sans politique nouvelle. Pour **comparer l’effort budgétaire réel,** il faut **neutraliser les effets de la conjoncture.** Le graphique suivant place chaque gouvernement avec trois éléments :
+
+- en abscisse, l’effort budgétaire moyen corrigé du cycle, c’est à dire l’effort réellement du aux politiques menées. Si le chiffre est positif, le gouvernement a en moyenne fait un effort budgétaire et amélioré la situation.
+
+- en ordonnée, l’output gap moyen sur la période gouvernementale. S’il est positif, la croissance est supérieure à son potentiel ; s’il est négatif, elle est inférieure. Autrement dit, il est plus facile de résorber un déficit quand l’économie tourne à plein régime.
+
+- en couleur, la position idéologique de la coalition au pouvoir sur un axe gauche-droite (pro-État vs pro-marché).
+
+![[Version interactive](https://public.flourish.studio/visualisation/25680600/)](images/fig-2.png){fig-alt="Graphique 2 du billet"}
+
+Ce cadrage révèle immédiatement un point crucial : les gouvernements agissent rarement dans un vide économique. De plus, les gouvernements belges sont souvent des coalitions rassemblant un spectre large de partis. Plus rarement, certaines exclusions clarifient la tendance politique de la coalition avec les gouvernements Dehaene sans les libéraux ou Martens-Gol/Michel sans les socialistes.
+
+Tentons une analyse sur des cas récents.
+
+D’abord, illustrons l’effet de la conjoncture : le gouvernement Wilmès a duré le temps du COVID et fait face à une énorme récession. On voit bien sa position extrême dans le graphe (relâchement budgétaire très important et output gap très négatif).
+
+Ensuite, les gouvernements Michel et De Croo ont deux équilibres politiques très différents : l’un est à droite, l’autre au centre-gauche. Ils font face à deux situations d’output gap comparable. Le premier réalise à peine un effort budgétaire quand l’autre en fait un (0,35% du PIB potentiel). Le gouvernement Di Rupo a fait face à une conjoncture plus mauvaise que le gouvernement Michel et a également fait mieux (0,28% du PIB potentiel).
+
+Regardons les cas emblématiques des deux gouvernements qui ont résorbé le déficit budgétaire de manière notable : Martens-Gol dans les années 80 et Dehaene dans les années 90. Le premier penche très sérieusement à droite et a fait le plus grand effort budgétaire dans des circonstances économiques difficiles. Le second penche à gauche et a réalisé le second plus grand effort budgétaire, avec un contexte de croissance meilleur que Martens-Gol.
+
+Enfin, revenons au cas des gouvernements Verhofstadt dirigés par un libéral mais dont la coalition penche plus à gauche. Le contexte économique était très bon. L’effort budgétaire fait le gouvernement tenant compte de ces circonstances était négligeable. Il a donc hérité d’une situation qu’il aurait sans doute pu améliorer encore.
+
+Tout ceci donne une indication que la couleur politique joue sans doute autant que le contexte économique pour réaliser l’effort. Mais, il y a également des stratégies différentes pour réaliser cet effort.
+
+## Derrière l’effort, plusieurs stratégies
+
+Comparer le niveau global d’effort budgétaire est une chose. Comprendre **comment** cet effort est produit en est une autre. Deux gouvernements peuvent afficher le même effort (corrigé de la conjoncture), tout en ayant des stratégies budgétaires radicalement différentes. Cela peut alors révéler un rapport à l’État et aux biens publics différent.
+
+Le tableau suivant décompose l’effort budgétaire en effort de recettes (un effort positif signifie plus de recettes en part du PIB potentiel), effort de dépenses primaires (un effort positif traduit une baisse des dépenses hors charges d’intérêts) et en efforts sur les charges d’intérêts de la dette[^3].
+
+![[Version interactive](https://public.flourish.studio/visualisation/25680600/)](images/fig-3.png){fig-alt="Graphique 3 du billet"}
+
+Analysons quelques gouvernements emblématiques sur le plan politique.
+
+Commençons par les **gouvernements étiquetés plus à gauche** de l’échiquier politique. Les gouvernement Dehaene de centre-gauche affichent un effort moyen annuel de 0,8% du PIB potentiel. Mais une bonne part provient de l’amélioration de la situation de la dette et des charges d’intérêts payés (0,5%). Le reste provient de recettes accrues (0,4%) alors que les dépenses ont augmenté un peu (0,1%). Le gouvernement Di Rupo a fait un effort moyen annuel de près de 0,3%, mais dont la moitié provient d’une amélioration des intérêts sur la dette. Le reste provient d’un effort sur les recettes qui couvrent une augmentation des dépenses. **Ces deux gouvernement plutôt de gauche renforcent l’idée d’une discipline budgétaire à gauche portée par les recettes**. Une exception : le gouvernement De Croo. Celui-ci a fait un effort budgétaire moyen hors charge d’intérêts supérieur à Dehaene dont 3/4 provient d’un effort sur les dépenses et 1/4 sur les recettes.
+
+A **droite de l’échiquier politique**, il y a les gouvernements de Martens-Gol et Michel. Le gouvernement de droite de Martens-Gol a l’effort budgétaire le plus important des gouvernements listés. L’effort primaire est même plus conséquent encore vu l’alourdissement de la charge d’intérêts sur la période. Sur les 1,6% du PIB d’effort moyen annuel (hors intérêts), 1,3% proviennent de diminutions de dépenses et 0,3% d’augmentation des recettes. A l’inverse, les gouvernements Michel ont dégradé la situation si on considère l’effort hors charge d’intérêts (-0,2% en moyenne). Ce gouvernement a diminué les recettes de l’État (-0,5% de PIB) et n’a pas fait un effort dans les dépenses équivalent (0,3% du PIB en moins).
+
+Mais pourquoi ce gouvernement de droite a mené une stratégie si périlleuse pour les comptes publics ? Elle renvoie à des **préférences idéologiques différentes**, déjà mises en lumière dans l’article de Müller et al. et par l’économiste Xavier Ragot. Les biens publics ne sont pas la priorité à droite, la consommation privée l’est. Réduire les recettes permet de rencontrer cet objectif d’augmentation de la consommation privée. Si cette stratégie creuse le déficit à court terme, elle peut créer une pression politique pour réduire ensuite les dépenses et donc la taille de l’État. Si un gouvernement plus à gauche vient par après (comme dans le cas du gouvernement de Croo), il devra faire un effort accru pour préserver les biens publics, à priori en haussant les recettes si la composante de gauche domine ou en baissant les dépenses si elle ne trouve pas les marges de manœuvre.
+
+## Conclusion
+
+L’impression de Sisyphe poussant son rocher n’est pas qu’une image commode : en Belgique, **la discipline budgétaire est un effort sans fin**. Chaque gouvernement doit « tenir la pente » année après année, dans un contexte où les périodes d’équilibre sont rares et brèves.
+
+La critique simpliste d’une **gauche dépensière** et d’une **droite vertueuse** ne résiste pas aux faits. Sur la période récente, les gouvernements **De Croo** et **Di Rupo** ont affiché un effort budgétaire corrigé du cycle supérieur à celui de **Michel**, pourtant situé plus à droite.
+
+Reste à savoir ce que fera le gouvernement **De Wever**. Le gouvernement actuel est traversé par un antagonisme clair. D’un côté, le **Mouvement Réformateur (MR)** pousse une stratégie inspirée de Friedman : baisser les recettes pour creuser le déficit, et forcer ensuite une réduction de la taille de l’État. De l’autre, une coalition plus large semble privilégier un compromis combinant **hausse de certaines recettes et réduction ciblée des dépenses**.
+
+Mais tout cela ne dit encore rien d’un enjeu fondamental, en particulier dans les débats actuels sur le saut d’index ou l’augmentation de la TVA : **qui paie et qui reçoit**. Derrière chaque point de PIB d’effort budgétaire, il y a des arbitrages distributifs très concrets — entre ménages et entreprises, entre revenus du capital et du travail, entre régions et groupes sociaux. Ce sera une autre histoire, essentielle, qu’il faudra raconter ensuite.
+
+[^1]: Müller, Andreas, Kjetil Storesletten, and Fabrizio Zilibotti. The Political Color of Fiscal Responsibility. Journal of the European Economic Association 14, 1 (2016)
+
+[^2]: Ragot, Xavier. [La dette publique est-elle de droite ou de gauche ?](https://www.ofce.sciences-po.fr/blog2024/fr/2025/20250908_XR2/) Blog de l’OFCE (2025)
+
+[^3]: Les intérêts payés chaque année sur la dette dépendent des emprunts faits dans la passé et du taux qui s’y applique. Ainsi, un gouvernement hérite d’une situation. Il n’en est pas responsable directement mais doit tout de même faire avec. On juge mieux de l’effort du gouvernement en enlevant cette composante et en considérant l’effort hors charge d’intérêts (ou effort primaire).

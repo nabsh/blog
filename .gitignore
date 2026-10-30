@@ -1,0 +1,21 @@
+# Sorties de Quarto (le site est reconstruit par GitHub Actions)
+/_site/
+/.quarto/
+**/*.quarto_ipynb
+
+# Réglages locaux de Claude Code
+/.claude/settings.local.json
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Réglages de Claude Code (chemins locaux)
+/.claude/
+
+# Notes de travail et sources non publiées
+/CLAUDE.md
+/ETAT.md
+/JOURNAL.md
+/design/
+/cv/

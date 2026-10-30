@@ -1,0 +1,70 @@
+# Écrits publiés ailleurs. Un élément par texte.
+# genre : Article scientifique | Working paper | Article | Dossier coordonné
+# path : lien vers l'original (laisser vide si aucun lien public)
+
+- title: "Le petit théâtre de l’Arizona : décryptage des logiques socio-économiques"
+  date: 2026-10-26
+  genre: Article
+  venue: Revue Démocratie
+  path: "https://www.revue-democratie.be/index.php?option=com_content&view=article&id=1802:le-petit-theatre-de-l-arizona-decryptage-des-logiques-socio-economiques&catid=38&Itemid=129"
+
+- title: "Exclus du chômage : quand l’arbre des faux chiffres cache la forêt des discriminations"
+  date: 2025-11-10
+  genre: Article
+  venue: Revue Politique
+  path: "https://www.revuepolitique.be/exclus-du-chomage-quand-larbre-des-faux-chiffres-cache-la-foret-des-discriminations/"
+
+- title: "Income Inequality in Belgium 1985–2022: New Evidence From Distributional National Accounts"
+  date: 2025-01-01
+  genre: Article scientifique
+  venue: Review of Income and Wealth
+  description: "71(4). Avec B. Capéau, A. Decoster, S. Van Houtven, J. Vanderkelen et K. Wolfs."
+
+- title: "Inégalités : mieux quantifier pour mieux redistribuer"
+  date: 2024-02-15
+  genre: Article
+  venue: Revue Démocratie
+  path: "https://www.revue-democratie.be/index.php?option=com_content&view=article&id=1662:inegalites-mieux-quantifier-pour-mieux-redistribuer&catid=38&Itemid=129"
+
+- title: "Convergence des gauches : es-tu déjà-là ?"
+  date: 2023-09-05
+  genre: Article
+  venue: Revue Politique
+  path: "https://www.revuepolitique.be/convergence-des-gauches-es-tu-deja-la/"
+
+- title: "L’avenir du communisme"
+  date: 2023-04-20
+  genre: Dossier coordonné
+  venue: Revue Politique, n° 122
+  description: "Avec Thibault Scohier et Pierre-Étienne Vandamme."
+  path: "https://www.revuepolitique.be/revue/lavenir-du-communisme/"
+
+- title: "Patrimoines belges : bienvenue dans un désert statistique"
+  date: 2023-12-01
+  genre: Article
+  venue: Revue Politique, n° 124
+
+- title: "Inflation : peut-on encore maîtriser l’incendie ?"
+  date: 2022-11-07
+  genre: Article
+  venue: Revue Démocratie
+  path: "https://www.revue-democratie.be/index.php?option=com_content&view=article&id=1585:inflation-peut-on-encore-maitriser-l-incendie&catid=38&Itemid=129"
+
+- title: "We Are All Facing the Same Storm, But Not All Are in the Same Boat"
+  date: 2022-05-01
+  genre: Working paper
+  venue: ECARES 2022-05
+  description: "L’effet du choc énergétique de 2021-2022 et des mesures compensatoires."
+
+- title: "L’État, un agent économique"
+  date: 2021-05-28
+  genre: Dossier coordonné
+  venue: Revue Politique, n° 116
+  description: "Avec Luca Ciccia, Vaïa Demertzis et François Perl."
+  path: "https://www.revuepolitique.be/revue/letat-agent-economique/"
+
+- title: "Les impacts socio-économiques de la crise du Coronavirus"
+  date: 2020-03-31
+  genre: Article
+  venue: Revue Politique
+  path: "https://www.revuepolitique.be/les-impacts-socio-economiques-de-la-crise-du-coronavirus/"
