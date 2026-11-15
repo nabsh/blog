@@ -60,6 +60,7 @@ Je suis économiste, chercheur, enseignant à l'UCLouvain et l'ISFSC. Ce site, c
 <ul class="mini">
   <li><b>Économie politique</b><span>ISFSC · 1re bachelier · depuis 2020</span></li>
   <li><b>Économie sociale et solidaire</b><span>ISFSC · 3e bachelier · depuis 2020</span></li>
+  <li><b>Préparation au mémoire</b><span>UCLouvain, FOPES · master 1 et 2 · depuis 2026</span></li>
 </ul>
 ```
 :::

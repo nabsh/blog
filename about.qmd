@@ -75,5 +75,7 @@ Explaining economics to a general audience is a separate project: Cash Cash Sard
 ```
 
 [Tous mes écrits →](ecrits.qmd){.btn} [Mes cours →](cours.qmd){.btn}
+
+Pour m'écrire · To get in touch : [LinkedIn](https://be.linkedin.com/in/nsheikhhassan){.contact-link}.
 :::
 :::
