@@ -202,7 +202,8 @@ mark.hl {
 .section-head a { display: inline-flex; align-items: center; min-height: 28px; font-family: var(--font-label); font-size: 14px; text-decoration: none; color: var(--muted); }
 .section-head a:hover { color: var(--ink); }
 
-.listing-empty, .quarto-listing-empty { color: var(--muted); font-style: italic; }
+.listing-empty, .quarto-listing-empty { margin: 34px 0 0; max-width: 60ch; color: var(--muted); font-style: italic; }
+.listing-empty a { color: var(--ink); text-decoration-color: var(--accent-2); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 
 /* Pied de page */
 .site-footer { padding: 36px 0 24px; margin-top: 56px; border-top: var(--header-border); font-size: 14px; color: var(--muted); }

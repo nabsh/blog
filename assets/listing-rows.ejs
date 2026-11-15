@@ -1,3 +1,6 @@
+<% if (items.length === 0) { %>
+<p class="listing-empty">Pas encore de billet ici : le premier arrive. En attendant, il y a <a href="/blog.html">tous les autres billets</a>, et l'abonnement juste en dessous pour être prévenu.</p>
+<% } %>
 <% let year = null; %>
 <% for (const item of items) { const y = item.date ? String(item.date).trim().split(' ').pop() : ''; const m = parseInt(item['reading-time']) || 0; %>
 <% if (y !== year) { year = y; %><h2 class="year"><%= y %></h2><% } %>
