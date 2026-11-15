@@ -33,13 +33,13 @@ Pour expliquer ces différences, les auteurs posent une hypothèse : les électe
 
 Ensuite, les auteurs confrontent ces hypothèses et leur modèle avec des données empiriques de l’OCDE sur plusieurs décennies. Ils trouvent qu’**un glissement d’un gouvernement de gauche vers la droite augmente en moyenne la dette publique de 0,6 point de PIB par an**. Ils trouvent également qu’un gouvernement de gauche a tendance à plus creuser la dette en période de récession que la droite.
 
-Comme le relève l’économiste Xavier Rigot[^2] sur le même sujet, la gauche et la droite ne sont pas figés dans le temps ou comparables entre pays. Il existe également des exceptions historiques à tout ceci. Et la couleur politique ne peut pas s’affranchir du contexte : faire face à des longues périodes de récession est plus complexe qu’à des périodes de forte croissance. D’où l’intérêt pour la Belgique de prendre un peu de recul et examiner cela sur le temps long.
+Comme le relève l’économiste Xavier Ragot[^2] sur le même sujet, la gauche et la droite ne sont pas figés dans le temps ou comparables entre pays. Il existe également des exceptions historiques à tout ceci. Et la couleur politique ne peut pas s’affranchir du contexte : faire face à des longues périodes de récession est plus complexe qu’à des périodes de forte croissance. D’où l’intérêt pour la Belgique de prendre un peu de recul et examiner cela sur le temps long.
 
 ## Belgique, malade chronique ?
 
-Depuis près d’un demi-siècle, le Belgique a connu de très longues périodes où les dépenses de l’État surpassaient les recettes. Le graphique suivant retrace cette trajectoire : recettes et dépenses (intérêts de la dette compris) en % du PIB, entre 1970 et 2025 (données AMECO), ainsi que les prévisions jusqu’à 2030 (Bureau fédéral du Plan).
+Depuis près d’un demi-siècle, la Belgique a connu de très longues périodes où les dépenses de l’État surpassaient les recettes. Le graphique suivant retrace cette trajectoire : recettes et dépenses (intérêts de la dette compris) en % du PIB, entre 1970 et 2025 (données AMECO), ainsi que les prévisions jusqu’à 2030 (Bureau fédéral du Plan).
 
-![[Version interactive](https://public.flourish.studio/visualisation/23200101/)](images/fig-1.png){fig-alt="Graphique 1 du billet"}
+![**Graphique 1.** Recettes et dépenses de l'État belge, en % du PIB, 1970-2030. [Version interactive](https://public.flourish.studio/visualisation/23200101/)](images/fig-1.png){fig-alt="Courbes des recettes et des dépenses publiques belges en pour cent du PIB, de 1970 à 2030, avec les gouvernements successifs. Les dépenses dépassent les recettes presque tout le temps : l'écart s'envole dans les années 70 (dépenses jusqu'à 63 % du PIB en 1983), se referme dans les années 90 et devient presque nul sous Verhofstadt, se rouvre avec la crise de 2008, bondit en 2020 avec le Covid (58 %) et reste d'environ 6 points dans les prévisions jusqu'en 2030 (dépenses vers 55 %, recettes vers 48,5 %)."}
 
 On peut découper cela en plusieurs séquences :
 
@@ -69,7 +69,7 @@ Juger un gouvernement sur son solde de financement nominal est une erreur classi
 
 - en couleur, la position idéologique de la coalition au pouvoir sur un axe gauche-droite (pro-État vs pro-marché).
 
-![[Version interactive](https://public.flourish.studio/visualisation/25680600/)](images/fig-2.png){fig-alt="Graphique 2 du billet"}
+![**Graphique 2.** Effort budgétaire corrigé du cycle et output gap moyen, par gouvernement. [Version interactive](https://public.flourish.studio/visualisation/25687358/)](images/fig-2.png){fig-alt="Nuage de points : chaque gouvernement belge est placé selon son effort budgétaire moyen corrigé du cycle (abscisse, en pour cent du PIB potentiel) et l'output gap moyen pendant son mandat (ordonnée), coloré selon sa position sur l'axe gauche-droite. Martens-Gol, à droite, fait le plus grand effort (1,3 %) malgré un output gap négatif (environ -1,7) ; suivent Dehaene (0,8 %), De Croo (0,35 %) et Di Rupo (0,28 %) ; Michel, avec un output gap proche de zéro comme De Croo, ne fait presque aucun effort. Wilmès, en pleine récession du Covid (output gap d'environ -5,3), affiche un fort relâchement (-2,35 %), dépassé seulement par Martens II-IV - Eyskens (-3,6 %)."}
 
 Ce cadrage révèle immédiatement un point crucial : les gouvernements agissent rarement dans un vide économique. De plus, les gouvernements belges sont souvent des coalitions rassemblant un spectre large de partis. Plus rarement, certaines exclusions clarifient la tendance politique de la coalition avec les gouvernements Dehaene sans les libéraux ou Martens-Gol/Michel sans les socialistes.
 
@@ -89,9 +89,9 @@ Tout ceci donne une indication que la couleur politique joue sans doute autant q
 
 Comparer le niveau global d’effort budgétaire est une chose. Comprendre **comment** cet effort est produit en est une autre. Deux gouvernements peuvent afficher le même effort (corrigé de la conjoncture), tout en ayant des stratégies budgétaires radicalement différentes. Cela peut alors révéler un rapport à l’État et aux biens publics différent.
 
-Le tableau suivant décompose l’effort budgétaire en effort de recettes (un effort positif signifie plus de recettes en part du PIB potentiel), effort de dépenses primaires (un effort positif traduit une baisse des dépenses hors charges d’intérêts) et en efforts sur les charges d’intérêts de la dette[^3].
+Le graphique suivant décompose l’effort budgétaire en effort de recettes (un effort positif signifie plus de recettes en part du PIB potentiel), effort de dépenses primaires (un effort positif traduit une baisse des dépenses hors charges d’intérêts) et en efforts sur les charges d’intérêts de la dette[^3].
 
-![[Version interactive](https://public.flourish.studio/visualisation/25680600/)](images/fig-3.png){fig-alt="Graphique 3 du billet"}
+![**Graphique 3.** Décomposition de l'effort annuel moyen par gouvernement, en % du PIB potentiel. [Version interactive](https://public.flourish.studio/visualisation/25682499/)](images/fig-3.png){fig-alt="Barres horizontales pour chaque gouvernement, en cinq panneaux : effort total, effort hors intérêts, effort de recettes, effort de dépenses primaires et effort sur les intérêts, en pour cent du PIB potentiel. Martens-Gol doit son effort aux dépenses primaires (1,34) ; Dehaene, aux intérêts (0,53) et aux recettes (0,41) ; Di Rupo, aux recettes (0,6), qui couvrent une hausse des dépenses (-0,45) ; Michel baisse les recettes (-0,5) sans compenser par les dépenses (0,3)."}
 
 Analysons quelques gouvernements emblématiques sur le plan politique.
 

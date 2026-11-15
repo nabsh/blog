@@ -247,34 +247,35 @@ mark.hl {
 .post-row:hover::before, .mini li:hover::before { opacity: 1; }
 
 /* ---------- Abonnement : titre à gauche, champ et bouton à droite ---------- */
-#abonnement { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 56px; align-items: start;
+/* Préfixé par #quarto-content pour l'emporter sur les styles du texte des billets (fin de billet) */
+#quarto-content #abonnement { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 56px; align-items: start;
   margin: 0; padding: 36px 0 8px; color: var(--ink); border-top: 5px solid var(--ink); }
 /* Second filet, rose, sous le noir */
-#abonnement::after { content: ""; position: absolute; left: 0; right: 0; top: 4px; height: 4px; background: var(--accent-2); }
-#abonnement h2 { margin: 0 0 16px; padding-bottom: 0; border: 0; font-family: var(--font-head); font-weight: 900; font-size: clamp(26px, 3vw, 34px); line-height: 1.12;
+#quarto-content #abonnement::after { content: ""; position: absolute; left: 0; right: 0; top: 4px; height: 4px; background: var(--accent-2); }
+#quarto-content #abonnement h2 { margin: 0 0 16px; padding-bottom: 0; border: 0; font-family: var(--font-head); font-weight: 900; font-size: clamp(26px, 3vw, 34px); line-height: 1.12;
   letter-spacing: -0.01em; color: var(--ink); text-shadow: 2px 1.5px 0 var(--shadow-ink); }
-#abonnement .sub-intro p { margin: 0; font-size: 17px; line-height: 1.55; color: var(--muted); }
-#abonnement form { display: grid; gap: 12px; align-items: center; }
-#abonnement form[hidden] { display: none; }
-#abonnement input[type="email"] { width: 100%; min-width: 0; padding: 13px 14px;
+#quarto-content #abonnement .sub-intro p { margin: 0; font-size: 17px; line-height: 1.55; color: var(--muted); }
+#quarto-content #abonnement form { display: grid; gap: 12px; align-items: center; }
+#quarto-content #abonnement form[hidden] { display: none; }
+#quarto-content #abonnement input[type="email"] { width: 100%; min-width: 0; padding: 13px 14px;
   font: inherit; font-family: var(--font-label); font-size: 17px;
   background: var(--field-plain, #fff); color: var(--ink); border: 2px solid var(--ink); border-radius: 0; }
-#abonnement input[type="email"]::placeholder { color: var(--muted); }
-#abonnement input[type="email"]:focus { outline: 3px solid var(--accent-2); outline-offset: 2px; }
-#abonnement button { width: 100%; padding: 14px 18px; cursor: pointer;
+#quarto-content #abonnement input[type="email"]::placeholder { color: var(--muted); }
+#quarto-content #abonnement input[type="email"]:focus { outline: 3px solid var(--accent-2); outline-offset: 2px; }
+#quarto-content #abonnement button { width: 100%; padding: 14px 18px; cursor: pointer;
   font: inherit; font-family: var(--font-label); font-weight: 900; font-size: 15px; text-transform: uppercase; letter-spacing: .08em;
   background: var(--ink); color: var(--bg); border: 0; border-radius: 0; transition: box-shadow .15s; }
-#abonnement button:hover { box-shadow: 5px 4px 0 var(--accent-2); }
-#abonnement button:disabled { opacity: .6; cursor: wait; }
-#abonnement .sub-msg { margin: 0; font-size: 16px; font-weight: 700; color: var(--ink); }
-#abonnement .sub-legal { margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
+#quarto-content #abonnement button:hover { box-shadow: 5px 4px 0 var(--accent-2); }
+#quarto-content #abonnement button:disabled { opacity: .6; cursor: wait; }
+#quarto-content #abonnement .sub-msg { margin: 0; font-size: 16px; font-weight: 700; color: var(--ink); }
+#quarto-content #abonnement .sub-legal { margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: var(--muted); }
 /* Liens vers les flux RSS */
-#abonnement .rss-links { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; margin: 14px 0 0;
+#quarto-content #abonnement .rss-links { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; margin: 14px 0 0;
   font-family: var(--font-label); font-size: 14px; color: var(--muted); }
-#abonnement .rss-links svg { width: 14px; height: 14px; }
-#abonnement .rss-links a { color: var(--ink); text-decoration-color: var(--accent-2); text-decoration-thickness: 2px; text-underline-offset: 3px; }
-#abonnement .rss-links a:hover { color: var(--accent-2-text); }
-@media (max-width: 760px) { #abonnement { grid-template-columns: 1fr; gap: 22px; padding-top: 28px; } }
+#quarto-content #abonnement .rss-links svg { width: 14px; height: 14px; }
+#quarto-content #abonnement .rss-links a { color: var(--ink); text-decoration-color: var(--accent-2); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+#quarto-content #abonnement .rss-links a:hover { color: var(--accent-2-text); }
+@media (max-width: 760px) { #quarto-content #abonnement { grid-template-columns: 1fr; gap: 22px; padding-top: 28px; } }
 
 /* ---------- Blog : liste des billets ---------- */
 .page-head { padding: 56px 0 18px; }
@@ -421,6 +422,15 @@ code { color: inherit; font-family: var(--font-code); }
 #quarto-appendix .appendix-heading, #quarto-appendix h2.anchored { font-family: var(--font-label); font-size: 13px; text-transform: uppercase; letter-spacing: .1em; font-weight: 800; color: var(--muted); border: 0; margin: 0 0 8px; }
 #quarto-appendix .quarto-appendix-contents { margin: 0; }
 #quarto-appendix .quarto-appendix-secondary-label { font-family: var(--font-label); font-weight: 800; font-size: 13px; color: var(--ink); margin-top: 14px; }
+
+/* Fin de billet (bloc ajouté par site.js) : abonnement en une colonne, puis la même rubrique */
+.billet #quarto-content > .fin-billet { margin-top: 56px; }
+#quarto-content .fin-billet #abonnement { grid-template-columns: 1fr; gap: 20px; }
+.billet #quarto-content .fin-lire { margin-top: 48px; }
+.billet #quarto-content .fin-billet .section-head { margin-bottom: 4px; }
+.billet #quarto-content .fin-billet h2.section-title { margin: 0; font-family: var(--font-label); font-size: 15px; font-weight: 800; line-height: inherit;
+  text-transform: uppercase; letter-spacing: .1em; color: var(--accent); }
+.billet #quarto-content .fin-billet .post-row:last-child { border-bottom: 0; }
 
 /* Pour citer (bloc ajouté par site.js) */
 .billet #quarto-content > .pour-citer { margin-top: 40px; padding: 16px 18px; border: 2.5px solid var(--frame); border-left: 8px solid var(--accent-2); }

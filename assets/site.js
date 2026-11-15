@@ -79,11 +79,55 @@
     document.addEventListener('DOMContentLoaded', function () {
       var app = document.getElementById('quarto-appendix'), foot = document.querySelector('.site-footer');
       (app || foot).before(cite);
+      finBillet(cite);
     });
   }
 
+  // Fin de billet : abonnement, puis deux billets de la même rubrique (lus dans son flux RSS)
+  function finBillet(cite) {
+    var tpl = document.getElementById('tpl-fin-billet'); if (!tpl) return;
+    var fin = tpl.content.firstElementChild.cloneNode(true);
+    var meta = document.querySelector('.post-head .meta'), rub = (meta && meta.dataset.rub) || 'eco';
+    var slug = { eco: 'economie', ref: 'reflexions', met: 'methodes' }[rub] || 'economie';
+    var nom = ((document.querySelector('.post-head .rub') || {}).textContent || '').trim();
+    fin.querySelector('.rss-rub').href = '/blog/' + slug + '.xml';
+    if (nom) fin.querySelector('.rss-rub').textContent = nom;
+    cite.before(fin);
+    fin.querySelectorAll('form.kit-form').forEach(kitForm);
+
+    var lire = fin.querySelector('.fin-lire'), liste = fin.querySelector('.fin-liste');
+    var ici = location.pathname.replace(/index\.html$/, '');
+    var billets = function (xml) {
+      return Array.prototype.map.call(new DOMParser().parseFromString(xml, 'text/xml').querySelectorAll('item'), function (it) {
+        var get = function (t) { return ((it.querySelector(t) || {}).textContent || '').trim(); };
+        return { titre: get('title'), lien: new URL(get('link'), location.href).pathname, date: new Date(get('pubDate')) };
+      }).filter(function (b) { return b.lien.replace(/index\.html$/, '') !== ici; });
+    };
+    var montrer = function (items, titre, lien, texte) {
+      if (!items.length) return;
+      lire.querySelector('.section-title').textContent = titre;
+      var tous = lire.querySelector('.fin-tous'); tous.href = lien; tous.textContent = texte;
+      items.slice(0, 2).forEach(function (b) {
+        var row = document.createElement('article'); row.className = 'post-row'; row.dataset.rub = rub;
+        row.innerHTML = '<div class="when"></div><div><a class="t"></a></div>';
+        row.querySelector('.when').textContent = isNaN(b.date) ? '' : b.date.toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
+        var a = row.querySelector('a'); a.href = b.lien; a.textContent = b.titre;
+        liste.appendChild(row);
+      });
+      lire.hidden = false;
+    };
+    if (!window.fetch || !window.DOMParser) return;
+    var lireFlux = function (url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(billets); };
+    // Même rubrique d'abord ; sinon, les autres billets du blog
+    lireFlux('/blog/' + slug + '.xml').then(function (items) {
+      if (items.length) return montrer(items, 'Dans la même rubrique', '/blog/' + slug + '.html', 'Toute la rubrique →');
+      return lireFlux('/blog.xml').then(function (tous) { montrer(tous, 'À lire aussi', '/blog.html', 'Tous les billets →'); });
+    }).catch(function () {});
+  }
+
   // Abonnement : envoi à Kit sans quitter la page (sans JavaScript, le formulaire part directement chez Kit)
-  document.querySelectorAll('form.kit-form').forEach(function (form) {
+  document.querySelectorAll('form.kit-form').forEach(kitForm);
+  function kitForm(form) {
     form.addEventListener('submit', function (e) {
       if (!window.fetch) return;
       e.preventDefault();
@@ -102,7 +146,7 @@
           msg.hidden = false;
         });
     });
-  });
+  }
 
   // Barre de lecture
   var prog = document.querySelector('.progress span');
