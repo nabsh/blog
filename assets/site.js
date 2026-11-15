@@ -61,9 +61,11 @@
     shareBar.querySelectorAll('a[data-share]').forEach(function (a) {
       a.href = targets[a.dataset.share]; if (a.dataset.share !== 'mail') { a.target = '_blank'; a.rel = 'noopener'; }
     });
+    var annonce = document.createElement('span'); annonce.className = 'sr'; annonce.setAttribute('role', 'status'); shareBar.appendChild(annonce);
+    var dire = function (t) { annonce.textContent = ''; setTimeout(function () { annonce.textContent = t; }, 50); };
     var copy = shareBar.querySelector('[data-share="copy"]');
     if (copy) copy.addEventListener('click', function () {
-      var done = function () { copy.classList.add('done'); copy.title = 'Lien copié'; setTimeout(function () { copy.classList.remove('done'); copy.title = 'Copier le lien'; }, 1600); };
+      var done = function () { copy.classList.add('done'); copy.title = 'Lien copié'; dire('Lien copié'); setTimeout(function () { copy.classList.remove('done'); copy.title = 'Copier le lien'; }, 1600); };
       if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () {}); else done();
     });
     // Pour citer : note de blog, date, adresse du site
@@ -74,7 +76,7 @@
     cite.innerHTML = '<h2>Pour citer ce billet</h2><p></p><button type="button" class="cite-copy">Copier</button>';
     cite.querySelector('p').textContent = ref;
     cite.querySelector('.cite-copy').addEventListener('click', function (e) {
-      var b = e.currentTarget; if (navigator.clipboard) navigator.clipboard.writeText(ref).then(function () { b.textContent = 'Copié'; setTimeout(function () { b.textContent = 'Copier'; }, 1600); });
+      var b = e.currentTarget; if (navigator.clipboard) navigator.clipboard.writeText(ref).then(function () { b.textContent = 'Copié'; dire('Référence copiée'); setTimeout(function () { b.textContent = 'Copier'; }, 1600); });
     });
     document.addEventListener('DOMContentLoaded', function () {
       var app = document.getElementById('quarto-appendix'), foot = document.querySelector('.site-footer');
@@ -82,6 +84,16 @@
       finBillet(cite);
     });
   }
+
+  // Lien d'évitement : il vise le premier bloc de contenu après la barre du haut
+  document.addEventListener('DOMContentLoaded', function () {
+    var qc = document.getElementById('quarto-content'); if (!qc) return;
+    var cible = Array.prototype.find.call(qc.children, function (el) { return !el.matches('.site-header, .progress, script, template'); });
+    if (!cible) return;
+    if (!cible.id) cible.id = 'contenu';
+    var skip = document.querySelector('.skip'); if (skip) skip.setAttribute('href', '#' + cible.id);
+    cible.setAttribute('tabindex', '-1'); cible.style.outline = 'none';
+  });
 
   // Fin de billet : abonnement, puis deux billets de la même rubrique (lus dans son flux RSS)
   function finBillet(cite) {
