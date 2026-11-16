@@ -220,6 +220,9 @@ mark.hl {
 .hero p { max-width: 54ch; margin: 0; font-size: 21px; line-height: 1.55; color: var(--poster-ink); }
 .hero mark.hl { background: var(--pink); color: #1a1a1a; padding: 0 .12em; }
 @media (max-width: 760px) { #quarto-content > .hero { padding: 40px 0 44px; } .hero p { font-size: 19px; } }
+/* Air entre le bloc noir et « Derniers billets » (Quarto imposait 14 px aux enfants de #quarto-content) */
+#quarto-content > .hero + .block { padding-top: 56px; }
+@media (max-width: 760px) { #quarto-content > .hero + .block { padding-top: 40px; } }
 
 /* Derniers billets : ni cadre ni ombre ; un filet d'encre, la rubrique, puis le titre.
    Au survol, le titre passe en rose ; rien ne bouge. */
