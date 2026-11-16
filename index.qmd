@@ -25,10 +25,6 @@ Je suis économiste, chercheur, enseignant à l'UCLouvain et l'ISFSC. Ce site, c
 :::
 :::
 
-```{=html}
-<div class="wrap"><hr class="orn"></div>
-```
-
 ::: {.block}
 ::: {.wrap}
 ```{=html}

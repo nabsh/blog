@@ -1,6 +1,7 @@
 /* =====================================================================
    NSH · feuille de style unique du site.
-   Charte Riso, palette Ronéo rose (noir et rose fluo), touches « tract ».
+   Charte « tract » : noir d'imprimerie et rose fluo sur papier clair, titres en
+   Alegreya noire, barre, têtes de page et pied en aplat noir.
    Mode clair par défaut ; le sombre (gris chaud) passe par
    [data-theme="dark"] sur <html>, posé par head.html et site.js.
    Chargée après Bootstrap et Quarto : plusieurs règles servent à les
@@ -10,7 +11,9 @@
 
 /* ---------- Couleurs et polices ---------- */
 :root {
-  --bg: #ecebe6; --panel: #e2e1da; --ink: #1a1a1a; --muted: #5b5b57; --rule: #c8c7c0;
+  --bg: #f6f5f1; --panel: #ecebe5; --ink: #1a1a1a; --muted: #5b5b57; --rule: #d3d2ca;
+  /* Aplats noirs (barre, têtes de page, pied) : fixes, ils ne s'inversent pas en sombre */
+  --poster: #1a1a1a; --poster-ink: #f6f5f1; --poster-muted: #c9c7c0; --poster-rule: #3a3a3a; --pink: #ff48b0;
   --accent: #1a1a1a; --accent-2: #ff48b0; --accent-2-text: #c1167a; --on-accent: #ecebe6;
   --frame: var(--ink);
   /* Rubriques : rose un peu plus foncé en clair, pour le niveau AA sur fond gris */
@@ -18,16 +21,14 @@
   --hl: rgba(255,72,176,.55); --shadow-ink: #ff48b0;
   /* Focus clavier : l'encre noire en clair (le rose fluo n'atteint que 2,6:1 sur le papier) */
   --focus: #1a1a1a;
-  --logo-sh: #ff48b0; --logo-shadow: #ffb0dc; --logo-dot: #1a1a1a;
-  --code-bg: #e0dfd8;
+  --code-bg: #ebeae4;
   --font-body: "Alegreya", Georgia, serif;
-  --font-head: "Alegreya Sans", system-ui, sans-serif; --head-weight: 800;
+  /* Titres en Alegreya noire (900) ; étiquettes et barre en Alegreya Sans */
+  --font-head: "Alegreya", Georgia, serif; --head-weight: 900;
   --font-label: "Alegreya Sans", system-ui, sans-serif;
   --font-nav: "Alegreya Sans", system-ui, sans-serif;
   --font-code: "Courier Prime", ui-monospace, monospace;
-  --header-border: 3px solid var(--accent);
   --row-rule: 1.5px dashed var(--rule); --year-rule: 3px solid var(--ink);
-  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 /* Sombre : gris chaud plutôt que noir, rose adouci */
 :root[data-theme="dark"] {
@@ -37,15 +38,15 @@
   --rub-eco: #f3a3cb; --rub-ref: #ebe6df; --rub-met: #a8a199;
   --hl: rgba(236,130,185,.26); --nav-hl: rgba(236,130,185,.4); --shadow-ink: rgba(236,130,185,.32);
   --focus: #ec82b9;
-  --logo-sh: #ec82b9; --logo-shadow: rgba(236,130,185,.3); --logo-dot: #ebe6df;
   --code-bg: #2a272d; --field-plain: #2a272d;
+  --poster: #141215; --poster-ink: #ebe6df; --poster-muted: #a8a199; --poster-rule: #3c383f;
 }
 
 /* ---------- Socle ---------- */
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
-  margin: 0; background: var(--bg); background-image: var(--grain); color: var(--ink);
+  margin: 0; background: var(--bg); color: var(--ink);
   font-family: var(--font-body); font-size: 18px; line-height: 1.6;
 }
 a, a:hover { color: inherit; }
@@ -70,16 +71,16 @@ img { max-width: 100%; display: block; }
 #quarto-content, main.content { margin: 0; padding: 0; max-width: none; }
 @media (max-width: 760px) { .wrap { padding: 0 16px; } body { font-size: 17px; } }
 
-/* ---------- Barre du haut : logo à gauche, rubriques à droite ---------- */
-.site-header { position: relative; z-index: 10; border-bottom: var(--header-border); }
+/* ---------- Barre du haut : aplat noir, logo à gauche, rubriques à droite ---------- */
+.site-header { position: relative; z-index: 10; background: var(--poster); color: var(--poster-ink); border-bottom: 5px solid var(--accent-2); }
+.site-header a, .site-header .nav a:not(.cta):hover, .site-header .nav a[aria-current="page"] { color: var(--poster-ink); }
 .site-header .wrap { display: flex; align-items: center; gap: 16px; min-height: 60px; }
 
-/* Logo : N à l'encre noire, SH en rose avec un décalage d'impression */
+/* Logo : N et point en papier, SH en rose (sur l'aplat noir) */
 .logo { margin-right: auto; display: inline-flex; align-items: baseline; text-decoration: none; white-space: nowrap;
   font-family: "Alegreya Sans"; font-weight: 900; font-size: 24px; line-height: 1; letter-spacing: -.01em; }
-.logo .l-n { color: var(--ink); }
-.logo .l-sh { color: var(--logo-sh); text-shadow: 2px 1.5px 0 var(--logo-shadow); }
-.logo .l-dot { color: var(--logo-dot); }
+.logo .l-n, .logo .l-dot { color: var(--poster-ink); }
+.logo .l-sh { color: var(--pink); }
 
 .nav { display: flex; align-items: center; gap: 4px; }
 .nav a { position: relative; z-index: 0; padding: 6px 12px; text-decoration: none;
@@ -87,41 +88,40 @@ img { max-width: 100%; display: block; }
 /* Le surlignage suit le mot, pas toute la largeur du menu */
 .nav a:not(.cta):not(.ico) { display: inline-block; width: max-content; }
 .nav a:not(.cta):not(.ico):hover { background: none; }
-.nav a:not(.cta):hover, .nav a[aria-current="page"] { color: var(--ink); }
 
 /* Survol : seul un trait de surligneur glisse sous le mot */
 .nav a::before {
   content: ""; position: absolute; z-index: -1; inset: auto 4px 8px 4px; height: .7em;
-  background: var(--nav-hl, var(--hl)); mix-blend-mode: multiply;
+  background: rgba(255,72,176,.55);
   transform: scaleX(0) rotate(-1.5deg); transform-origin: left center; transition: transform .22s ease-out;
   border-radius: 2px 7px 3px 8px / 7px 3px 8px 2px;
 }
-[data-theme="dark"] .nav a::before { mix-blend-mode: normal; }
 .nav a:not(.cta):hover::before, .nav a[aria-current="page"]::before { transform: scaleX(1) rotate(-1.5deg); }
 .nav .cta::before, .nav .social .ico::before { display: none; }
 
-/* « S'abonner » : un aplat d'encre */
-.nav .cta { margin-left: 8px; background: var(--accent); color: var(--on-accent); }
-.nav .cta:hover { box-shadow: 4px 3px 0 var(--accent-2); }
+/* « S'abonner » : aplat rose, texte noir */
+.nav .cta { margin-left: 8px; background: var(--pink); color: #1a1a1a !important; }
+.nav .cta:hover { box-shadow: 4px 3px 0 var(--poster-ink); }
 
 /* Icônes de la barre */
-.nav .social { display: inline-flex; align-items: center; gap: 2px; margin-left: 10px; padding-left: 10px; border-left: 2px solid var(--rule); }
-.nav a.ico:not(.cta):hover, .nav a.ico:not(.cta):focus-visible { color: var(--accent-2); }
+.nav .social { display: inline-flex; align-items: center; gap: 2px; margin-left: 10px; padding-left: 10px; border-left: 2px solid var(--poster-rule); }
+.nav a.ico:not(.cta):hover, .nav a.ico:not(.cta):focus-visible { color: var(--pink); }
+.site-header :focus-visible { outline-color: var(--pink); }
 
 /* Bouton clair / sombre */
 .theme-btn { display: inline-grid; place-items: center; width: 34px; height: 34px; margin-left: 6px;
-  font: inherit; font-size: 16px; line-height: 1; background: none; color: var(--ink); border: 2px solid var(--ink);
+  font: inherit; font-size: 16px; line-height: 1; background: none; color: var(--poster-ink); border: 2px solid var(--poster-ink);
   cursor: pointer; transition: color .15s, border-color .15s; }
-.theme-btn:hover { color: var(--accent-2); border-color: var(--accent-2); }
+.theme-btn:hover { color: var(--pink); border-color: var(--pink); }
 .theme-btn .moon, [data-theme="dark"] .theme-btn .sun { display: none; }
 [data-theme="dark"] .theme-btn .moon { display: inline; }
 
 /* Bouton Menu : mêmes capitales que la barre ; caché sur grand écran */
 .menu-btn { display: none; height: 34px; padding: 0 12px; cursor: pointer;
   font: inherit; font-family: var(--font-label); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: .08em;
-  background: none; color: var(--ink); border: 2px solid var(--ink); }
-.menu-btn:hover { color: var(--accent-2); border-color: var(--accent-2); }
-.menu-btn[aria-expanded="true"] { background: var(--ink); color: var(--bg); }
+  background: none; color: var(--poster-ink); border: 2px solid var(--poster-ink); }
+.menu-btn:hover { color: var(--pink); border-color: var(--pink); }
+.menu-btn[aria-expanded="true"] { background: var(--poster-ink); color: var(--poster); }
 
 /* Menu replié dès la tablette (sous 1000 px) : la barre complète n'y tient pas */
 @media (max-width: 1000px) {
@@ -129,13 +129,13 @@ img { max-width: 100%; display: block; }
   .logo { margin-right: 0; }
   .menu-btn { display: inline-block; margin-left: auto; }
   .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; z-index: 30; flex-direction: column; align-items: flex-start; gap: 0;
-         background: var(--bg); border-bottom: var(--header-border); padding: 10px 32px 18px; box-shadow: 0 10px 0 -6px var(--accent-2); }
+         background: var(--poster); border-bottom: 5px solid var(--accent-2); padding: 10px 32px 18px; }
   .nav.open { display: flex; }
   /* Bootstrap affiche .nav:not(.nav-hidden) dès 576 px, en !important : sans ceci, le menu reste ouvert */
   .site-header .nav:not(.open) { display: none !important; }
   .nav a:not(.ico) { padding: 10px 2px; }
   .nav .cta { align-self: stretch; text-align: center; margin: 10px 0 0; padding: 10px 12px; }
-  .nav .social { margin: 14px 0 0; padding: 12px 0 0; border-left: 0; border-top: 2px solid var(--rule); align-self: stretch; gap: 6px; }
+  .nav .social { margin: 14px 0 0; padding: 12px 0 0; border-left: 0; border-top: 2px solid var(--poster-rule); align-self: stretch; gap: 6px; }
   /* Cibles tactiles plus grandes dans le menu replié */
   .nav .social .ico { width: 40px; height: 40px; }
 }
@@ -157,9 +157,6 @@ img { max-width: 100%; display: block; }
 /* Temps de lecture : en texte, dans la police des étiquettes */
 .readtime { display: inline-flex; align-items: center; gap: 2px;
   font-family: var(--font-label); font-weight: 800; font-size: 12.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
-
-/* Filet double : noir, ombré de rose */
-.orn { height: 0; margin: 0 0 4px; border: 0; border-top: 5px solid var(--ink); background: none; box-shadow: 0 4px 0 var(--accent-2); }
 
 /* Boutons simples (Bootstrap leur donne une encre fixe, illisible en sombre) */
 .btn { display: inline-block; padding: 9px 16px; text-decoration: none;
@@ -184,10 +181,14 @@ mark.hl {
   -webkit-box-decoration-break: clone; box-decoration-break: clone;
 }
 
-/* Titres de page : encre noire, décalage rose */
-.page-head h1, .post-head h1, .about-head h1 { color: var(--accent); text-shadow: 3px 2px 0 var(--shadow-ink); }
-/* Capitales serrées pour les titres courts */
-.page-head h1, .about-head h1 { text-transform: uppercase; font-weight: 900; letter-spacing: .01em; word-spacing: .08em; }
+/* Têtes de page (pages, billets, À propos) : affiches en aplat noir sur toute la largeur.
+   L'ombre portée « 100vmax » étend l'aplat au-delà du conteneur ; clip-path la coupe en haut et en bas. */
+.page-head, #quarto-content > header.post-head, .about-head {
+  position: relative; color: var(--poster-ink); background: var(--poster);
+  box-shadow: 0 0 0 100vmax var(--poster); clip-path: inset(0 -100vmax); }
+.page-head h1, .post-head h1, .about-head h1 { font-family: var(--font-head); font-weight: 900; letter-spacing: -.02em; }
+.page-head h1, .about-head h1 { color: var(--pink); }
+.post-head h1 { color: var(--poster-ink); text-shadow: 3px 3px 0 rgba(255,72,176,.75); }
 
 /* Blocs de page. Quarto ajoute 14 px en haut des enfants de #quarto-content : on reprend la main */
 .block { padding: 60px 0; }
@@ -196,53 +197,45 @@ mark.hl {
 .page-body { max-width: 760px; }
 @media (max-width: 760px) { .block { padding: 44px 0; } .block + .block { padding-top: 8px; } }
 
-.section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 30px; }
-.section-title { margin: 0; font-family: var(--font-label); font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); }
+/* Titres de section : bandeau d'encre posé sur un filet noir */
+.section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 30px; border-bottom: 3px solid var(--ink); }
+.section-title { display: inline-block; margin: 0; padding: 5px 10px 4px; background: var(--ink); color: var(--bg);
+  font-family: var(--font-label); font-size: 14px; font-weight: 800; line-height: 1.3; text-transform: uppercase; letter-spacing: .1em; }
 /* Liens « Tous → » : cible d'au moins 24 px */
-.section-head a { display: inline-flex; align-items: center; min-height: 28px; font-family: var(--font-label); font-size: 14px; text-decoration: none; color: var(--muted); }
+.section-head a { display: inline-flex; align-items: center; min-height: 28px; padding-bottom: 2px; font-family: var(--font-label); font-size: 14px; text-decoration: none; color: var(--muted); }
 .section-head a:hover { color: var(--ink); }
 
 .listing-empty, .quarto-listing-empty { margin: 34px 0 0; max-width: 60ch; color: var(--muted); font-style: italic; }
 .listing-empty a { color: var(--ink); text-decoration-color: var(--accent-2); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 
-/* Pied de page */
-.site-footer { padding: 36px 0 24px; margin-top: 56px; border-top: var(--header-border); font-size: 14px; color: var(--muted); }
+/* Pied de page : aplat noir, filet rose */
+.site-footer { padding: 36px 0 28px; margin-top: 72px; background: var(--poster); color: var(--poster-muted); border-top: 5px solid var(--accent-2); font-size: 14px; }
+.site-footer a { color: var(--poster-ink); }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
 
 /* ---------- Accueil ---------- */
-#quarto-content > .hero { padding: 76px 0 60px; }
-/* « Salut, c'est Nabil ! » aux couleurs du logo */
-.hero h1 { margin: 0 0 .5em; font-family: var(--font-head); font-weight: 900; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.15;
-  color: var(--accent); text-shadow: 2px 1.5px 0 var(--shadow-ink); }
-.hero p { max-width: 60ch; margin: 0; font-size: 19px; line-height: 1.6; color: var(--ink); }
-@media (max-width: 760px) { #quarto-content > .hero { padding: 48px 0 40px; } }
+/* « Salut, c'est Nabil ! » : un bloc noir assumé, titre rose, texte papier */
+#quarto-content > .hero { padding: 60px 0 64px; background: var(--poster); color: var(--poster-ink); }
+.hero h1 { margin: 0 0 .45em; font-family: var(--font-head); font-weight: 900; font-size: clamp(38px, 5.4vw, 68px); line-height: 1; letter-spacing: -.02em; color: var(--pink); }
+.hero p { max-width: 54ch; margin: 0; font-size: 21px; line-height: 1.55; color: var(--poster-ink); }
+.hero mark.hl { background: var(--pink); color: #1a1a1a; padding: 0 .12em; }
+@media (max-width: 760px) { #quarto-content > .hero { padding: 40px 0 44px; } .hero p { font-size: 19px; } }
 
-/* Derniers billets : des encadrés de tract, ombre rose */
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+/* Derniers billets : ni cadre ni ombre ; un filet d'encre, la rubrique, puis le titre.
+   Au survol, le titre passe en rose ; rien ne bouge. */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 /* Bootstrap a sa propre classe .card : tout est redéfini ici */
-.card { --bs-card-bg: transparent; position: relative; display: flex; flex-direction: column; min-height: 290px; padding: 18px 18px 14px;
-  color: var(--ink); background: var(--card-tint, var(--bg));
-  border: 2.5px solid var(--frame); border-top: 7px solid var(--rc); border-radius: 0;
-  box-shadow: 7px 7px 0 var(--accent-2); transition: transform .15s ease-out, box-shadow .15s ease-out; }
-.card:nth-child(1) { --card-tint: color-mix(in srgb, var(--accent-2) 16%, var(--bg)); }
-.card:nth-child(2) { --card-tint: var(--panel); }
-.card:nth-child(3) { --card-tint: var(--bg); }
-.card:hover { transform: translate(-3px, -3px) rotate(-.5deg); box-shadow: 11px 11px 0 var(--accent-2); }
-[data-theme="dark"] .card { box-shadow: 7px 7px 0 rgba(236,130,185,.45); }
-[data-theme="dark"] .card:hover { box-shadow: 11px 11px 0 rgba(236,130,185,.55); }
-.card .t { display: block; margin: 12px 0 10px; text-decoration: none; color: var(--ink);
-  font-family: var(--font-head); font-weight: var(--head-weight); font-size: 23px; line-height: 1.22; }
-.card .t:hover { color: var(--ink); }
+.card { --bs-card-bg: transparent; position: relative; display: flex; flex-direction: column; padding: 12px 0 4px;
+  color: var(--ink); background: none; border: 0; border-top: 5px solid var(--ink); border-radius: 0; }
+.card .t { display: block; margin: 8px 0 10px; text-decoration: none; color: var(--ink);
+  font-family: var(--font-head); font-weight: 900; font-size: 27px; line-height: 1.1; letter-spacing: -.01em; transition: color .15s; }
+.card:hover .t, .card .t:hover { color: var(--accent-2-text); }
 /* Toute la carte est cliquable */
 .card .t::after { content: ""; position: absolute; inset: 0; }
 .card p { margin: 0 0 12px; font-size: 16px; color: var(--muted); }
 .card-foot { margin-top: auto; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; padding-top: 10px; }
 /* Trois colonnes seulement quand il y a la place */
-@media (max-width: 1000px) {
-  .cards { grid-template-columns: 1fr; gap: 26px; }
-  .card { min-height: 0; }
-  .card .t { margin-top: 10px; }
-}
+@media (max-width: 1000px) { .cards { grid-template-columns: 1fr; gap: 30px; } }
 /* Téléphone : deux cartes et descriptions sur deux lignes, pour que l'abonnement arrive plus tôt */
 @media (max-width: 760px) {
   .card:nth-child(n+3) { display: none; }
@@ -270,12 +263,13 @@ mark.hl {
 
 /* ---------- Abonnement : titre à gauche, champ et bouton à droite ---------- */
 /* Préfixé par #quarto-content pour l'emporter sur les styles du texte des billets (fin de billet) */
+/* Accueil : un coupon rose à découper (cadre d'encre, pointillés autour) */
 #quarto-content #abonnement { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 56px; align-items: start;
-  margin: 0; padding: 36px 0 8px; color: var(--ink); border-top: 5px solid var(--ink); }
-/* Second filet, rose, sous le noir */
-#quarto-content #abonnement::after { content: ""; position: absolute; left: 0; right: 0; top: 4px; height: 4px; background: var(--accent-2); }
+  margin: 10px; padding: 32px 32px 26px; color: var(--ink); border: 2.5px solid var(--ink);
+  background: color-mix(in srgb, var(--accent-2) 20%, var(--bg)); outline: 2px dashed var(--ink); outline-offset: 8px; }
+[data-theme="dark"] #quarto-content #abonnement { border-color: var(--frame); outline-color: var(--frame); background: color-mix(in srgb, var(--accent-2) 14%, var(--bg)); }
 #quarto-content #abonnement h2 { margin: 0 0 16px; padding-bottom: 0; border: 0; font-family: var(--font-head); font-weight: 900; font-size: clamp(26px, 3vw, 34px); line-height: 1.12;
-  letter-spacing: -0.01em; color: var(--ink); text-shadow: 2px 1.5px 0 var(--shadow-ink); }
+  letter-spacing: -0.01em; color: var(--ink); }
 #quarto-content #abonnement .sub-intro p { margin: 0; font-size: 17px; line-height: 1.55; color: var(--muted); }
 #quarto-content #abonnement form { display: grid; gap: 12px; align-items: center; }
 #quarto-content #abonnement form[hidden] { display: none; }
@@ -297,12 +291,17 @@ mark.hl {
 #quarto-content #abonnement .rss-links svg { width: 14px; height: 14px; }
 #quarto-content #abonnement .rss-links a { color: var(--ink); text-decoration-color: var(--accent-2); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 #quarto-content #abonnement .rss-links a:hover { color: var(--accent-2-text); }
-@media (max-width: 760px) { #quarto-content #abonnement { grid-template-columns: 1fr; gap: 22px; padding-top: 28px; } }
+@media (max-width: 760px) { #quarto-content #abonnement { grid-template-columns: 1fr; gap: 22px; padding: 24px 18px 20px; } }
 
 /* ---------- Blog : liste des billets ---------- */
-.page-head { padding: 56px 0 18px; }
-.page-head h1 { margin: .2em 0 .3em; font-family: var(--font-head); font-size: clamp(34px, 5vw, 52px); line-height: 1.1; }
-.page-head p { margin: 0; color: var(--muted); max-width: 60ch; }
+.page-head { padding: 48px 0 30px; margin-bottom: 30px; }
+.page-head h1 { margin: .1em 0 .3em; font-size: clamp(40px, 5.6vw, 66px); line-height: 1.02; }
+.page-head p { margin: 0; color: var(--poster-muted); max-width: 60ch; }
+/* Étiquettes de rubrique dans la tête noire */
+.page-head .chip { color: var(--poster-ink); border-color: var(--poster-ink); }
+.page-head .chip:hover { box-shadow: none; background: var(--poster-ink); color: var(--poster); }
+.page-head .chip[aria-current="page"] { background: var(--pink); border-color: var(--pink); color: #1a1a1a; }
+.page-head :focus-visible { outline-color: var(--pink); }
 
 /* Rubriques en étiquettes */
 .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 24px 0 8px; }
@@ -313,12 +312,12 @@ mark.hl {
 .chip[aria-current="page"] { background: var(--ink); color: var(--bg); }
 
 .year { margin: 34px 0 0; padding-bottom: 6px; border-bottom: var(--year-rule);
-  font-family: var(--font-label); font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+  font-family: var(--font-label); font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--ink); }
 .post-row { position: relative; display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 18px 0; border-bottom: var(--row-rule); }
 .post-row .when { padding-top: 4px; font-family: var(--font-label); font-size: 13px; color: var(--muted); }
 .post-row .t { display: block; margin: 4px 0 4px; text-decoration: none;
-  font-family: var(--font-head); font-weight: var(--head-weight); font-size: 21px; line-height: 1.25; }
-.post-row .t:hover { color: var(--accent); }
+  font-family: var(--font-head); font-weight: 900; font-size: 23px; line-height: 1.14; transition: color .15s; }
+.post-row .t:hover { color: var(--accent-2-text); }
 .post-row p { margin: 0; font-size: 16px; color: var(--muted); }
 .post-row .readtime { display: block; margin-top: 8px; }
 .post-row[hidden] { display: none; }
@@ -335,7 +334,7 @@ mark.hl {
 /* ---------- Écrits ---------- */
 .ecrit-row { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 16px 0; border-bottom: var(--row-rule); }
 .ecrit-row .when { padding-top: 4px; font-family: var(--font-label); font-size: 13px; color: var(--muted); }
-.ecrit-row .t { font-family: var(--font-head); font-weight: 800; font-size: 19px; line-height: 1.25; text-decoration: none; }
+.ecrit-row .t { font-family: var(--font-head); font-weight: 800; font-size: 20px; line-height: 1.25; text-decoration: none; }
 .ecrit-row a.t:hover { color: var(--accent-2-text); }
 .ecrit-row p { margin: 4px 0 0; font-size: 16px; color: var(--muted); }
 .ecrit-row .venue { font-style: italic; }
@@ -345,13 +344,15 @@ mark.hl {
 @media (max-width: 760px) { .ecrit-row { grid-template-columns: 1fr; gap: 2px; } }
 
 /* ---------- À propos ---------- */
-.about-head { display: grid; grid-template-columns: 170px 1fr; gap: 36px; align-items: center; padding: 56px 0 36px; }
+.about-head { display: grid; grid-template-columns: 170px 1fr; gap: 36px; align-items: center; padding: 48px 0 44px; margin-bottom: 36px; }
+.about-head .portrait { border-color: var(--poster-ink); }
 /* Portrait : la photo telle quelle, cadre d'encre et ombre rose comme les cartes */
 .portrait { position: relative; width: 170px; height: 170px; overflow: hidden; border: 2.5px solid var(--frame); box-shadow: 7px 7px 0 var(--accent-2); }
 [data-theme="dark"] .portrait { box-shadow: 7px 7px 0 rgba(236,130,185,.45); }
 .portrait img, .portrait canvas { width: 100%; height: 100%; object-fit: cover; display: block; }
-.about-head h1 { margin: 0 0 6px; font-family: var(--font-head); font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; }
-.about-head .roles { margin: 0; color: var(--muted); }
+.about-head h1 { margin: 0 0 6px; font-size: clamp(36px, 5vw, 58px); line-height: 1.04; }
+.about-head .roles { margin: 0; color: var(--poster-muted); }
+.about-head a { color: var(--poster-ink); }
 
 .bilingual { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .bilingual h2 { margin: 0 0 8px; font-family: var(--font-label); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
@@ -374,27 +375,30 @@ mark.hl {
 /* ---------- Billet ---------- */
 /* Barre de progression de lecture */
 .progress { position: fixed; top: 0; left: 0; z-index: 40; width: 100%; height: 6px; pointer-events: none; }
-.progress span { display: block; height: 100%; width: 0; background: var(--accent); box-shadow: 0 3px 0 var(--accent-2); }
+.progress span { display: block; height: 100%; width: 0; background: var(--pink); }
 
-/* En-tête du billet */
+/* En-tête du billet : affiche noire (voir « Têtes de page »), texte papier */
 .post-head { max-width: 780px; }
-#quarto-content > header.post-head { padding: 56px 0 26px; }
-.post-head h1 { margin: .3em 0 .35em; font-family: var(--font-head); font-weight: var(--head-weight); font-size: clamp(32px, 5vw, 54px); line-height: 1.08; }
-.post-head .lede { margin: 0 0 20px; font-size: 21px; line-height: 1.45; color: var(--muted); }
+#quarto-content > header.post-head { padding: 46px 0 0; margin-bottom: 40px; }
+.post-head h1 { margin: .3em 0 .35em; font-size: clamp(34px, 4.8vw, 56px); line-height: 1.04; }
+.post-head .lede { margin: 0 0 22px; font-size: 22px; font-style: italic; line-height: 1.45; color: var(--poster-muted); }
+.post-head .meta, .post-head .readtime { color: var(--poster-muted); }
+.post-head .rub { color: var(--pink); }
 .post-head .meta .readtime { margin-left: 4px; }
-@media (max-width: 760px) { #quarto-content > header.post-head { padding: 36px 0 22px; } }
+.post-head :focus-visible { outline-color: var(--pink); }
+@media (max-width: 760px) { #quarto-content > header.post-head { padding: 34px 0 0; margin-bottom: 30px; } .post-head .lede { font-size: 20px; } }
 
-/* Barre de partage et bouton Citer */
+/* Barre de partage et bouton Citer (dans la tête noire) */
 .share { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 4px 0 0; padding: 8px 0;
-  border-top: 2px solid var(--rule); border-bottom: 2px solid var(--rule); font-family: var(--font-label); font-size: 13px; }
-.share a { text-decoration: none; color: var(--muted); }
+  border-top: 2px solid var(--poster-rule); font-family: var(--font-label); font-size: 13px; }
+.share a, .share .ico { text-decoration: none; color: var(--poster-muted); }
 .share .ico { width: 34px; height: 34px; }
-.share .ico.done { color: var(--accent-2); }
+.share .ico:hover, .share .ico:focus-visible, .share .ico.done { color: var(--pink); }
 .cite-btn { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; padding: 4px 12px; text-decoration: none;
   font-family: var(--font-label); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: .06em;
-  color: var(--ink); border: 2px solid var(--ink); transition: color .15s, border-color .15s; }
+  color: var(--poster-ink) !important; border: 2px solid var(--poster-ink); transition: color .15s, border-color .15s; }
 .cite-btn svg { width: 14px; height: 14px; }
-.cite-btn:hover { color: var(--accent-2); border-color: var(--accent-2); }
+.cite-btn:hover { color: var(--pink) !important; border-color: var(--pink); }
 /* Sur téléphone : « Citer » reste sur la ligne des icônes */
 @media (max-width: 420px) { .share { gap: 0; } .share .ico { width: 32px; } .cite-btn { padding: 4px 10px; } }
 
@@ -407,7 +411,7 @@ mark.hl {
 @media (min-width: 761px) {
   .billet #quarto-content > p, .billet #quarto-content > blockquote, .billet #quarto-content > ul, .billet #quarto-content > ol, .billet #quarto-content > section.level2 { font-size: 19px; }
 }
-.billet #quarto-content h2 { font-family: var(--font-head); font-weight: var(--head-weight); font-size: 28px; line-height: 1.2; margin: 1.8em 0 .6em; color: var(--accent); }
+.billet #quarto-content h2 { font-family: var(--font-head); font-weight: 900; font-size: 30px; line-height: 1.15; letter-spacing: -.01em; margin: 1.8em 0 .6em; color: var(--accent); }
 .billet #quarto-content h3 { font-family: var(--font-head); font-weight: 800; font-size: 21px; margin: 1.5em 0 .5em; }
 .billet #quarto-content ul, .billet #quarto-content ol { padding-left: 1.3em; margin: 0 0 1.05em; }
 .billet #quarto-content li { margin-bottom: .3em; }
@@ -432,13 +436,28 @@ mark.hl {
 .quarto-figure figcaption a { color: var(--accent-2-text); font-weight: 700; }
 .quarto-figure-center > figure > p, .quarto-figure-center > figure > div { text-align: left; }
 
-/* Notes de bas de page */
-section.footnotes { margin-top: 44px; padding-top: 14px; border-top: 5px solid var(--ink); font-size: 15px; color: var(--muted); }
+/* Notes de bas de page : en fin de billet sur téléphone et tablette en hauteur */
+section.footnotes { margin-top: 44px; padding-top: 14px; border-top: 3px solid var(--ink); font-size: 15px; color: var(--muted); }
 section.footnotes hr { display: none; }
 section.footnotes ol { padding-left: 1.2em; }
 a.footnote-ref { display: inline-block; padding: 4px 4px; margin: -4px -2px; text-decoration: none; font-family: var(--font-label); font-weight: 800; color: var(--accent-2-text); }
 a.footnote-ref sup { font-size: 12px; }
 .footnote-back { text-decoration: none; }
+
+/* Notes en marge (copiées par site.js à côté de leur appel) : dès 1024 px, ordinateur et tablette à l'horizontale.
+   Largeur de 200 à 260 px selon la place à droite de la colonne de 680 px. */
+.sidenote { display: none; }
+@media (min-width: 1024px) {
+  .billet { --sn-w: clamp(200px, calc(100vw - 680px - 130px), 260px); }
+  .billet .sidenote { display: block; float: right; clear: right; position: relative; width: var(--sn-w); margin: .2em calc(-1 * (var(--sn-w) + 36px)) 14px 0;
+    padding-top: 6px; border-top: 2px solid var(--accent-2);
+    font-family: var(--font-label); font-size: 14.5px; line-height: 1.45; font-weight: 400; font-style: normal; color: var(--muted); }
+  .sidenote .sn-num { margin-right: 5px; font-weight: 800; color: var(--accent-2-text); }
+  .sidenote a { overflow-wrap: anywhere; }
+  .sidenote.flash { background: var(--hl); }
+  /* La liste de fin reste pour les lecteurs d'écran, masquée à l'œil */
+  .billet #quarto-appendix section.footnotes { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); margin: 0; padding: 0; border: 0; }
+}
 
 /* Code */
 div.sourceCode, pre.sourceCode { background: var(--code-bg); border: 0; border-left: 6px solid var(--accent); border-radius: 0; }
@@ -451,22 +470,39 @@ code { color: inherit; font-family: var(--font-code); }
 #quarto-appendix .quarto-appendix-contents { margin: 0; }
 #quarto-appendix .quarto-appendix-secondary-label { font-family: var(--font-label); font-weight: 800; font-size: 13px; color: var(--ink); margin-top: 14px; }
 
-/* Fin de billet (bloc ajouté par site.js) : abonnement en une colonne, puis la même rubrique */
-.billet #quarto-content > .fin-billet { margin-top: 56px; }
-#quarto-content .fin-billet #abonnement { grid-template-columns: 1fr; gap: 20px; }
+/* Fin de billet, dans l'ordre (posé par site.js) : notes, pour citer, abonnement, autres billets */
+
+/* Pour citer : une ligne discrète, pas un encadré */
+.billet #quarto-content > .pour-citer { margin-top: 36px; padding-top: 12px; border-top: var(--row-rule); font-size: 15px; line-height: 1.5; color: var(--muted); }
+.billet #quarto-content .pour-citer h2 { display: inline; margin: 0 8px 0 0; font-family: var(--font-label); font-size: 13px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .1em; color: var(--ink); }
+.billet #quarto-content .pour-citer p { display: inline; margin: 0; font-size: 15px; overflow-wrap: anywhere; }
+.cite-copy { margin-left: 8px; padding: 0; font: inherit; font-family: var(--font-label); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: .06em;
+  background: none; color: var(--accent-2-text); border: 0; border-bottom: 2px solid currentColor; cursor: pointer; }
+.cite-copy:hover { color: var(--ink); }
+
+.billet #quarto-content > .fin-billet { margin-top: 48px; }
+/* Abonnement de fin de billet : un coupon mince, champ et bouton sur une ligne */
+#quarto-content .fin-billet #abonnement { display: block; margin: 0; padding: 20px 22px 18px; outline: 0; }
+#quarto-content .fin-billet #abonnement h2 { margin: 0 0 4px; font-size: 24px; }
+#quarto-content .fin-billet #abonnement .sub-intro p { margin: 0 0 14px; font-size: 16px; }
+#quarto-content .fin-billet #abonnement form { grid-template-columns: 1fr auto; gap: 8px; }
+#quarto-content .fin-billet #abonnement input[type="email"] { padding: 10px 12px; font-size: 16px; }
+#quarto-content .fin-billet #abonnement button { width: auto; padding: 11px 18px; font-size: 14px; }
+#quarto-content .fin-billet #abonnement .sub-legal { margin-top: 10px; font-size: 13px; }
+@media (max-width: 480px) { #quarto-content .fin-billet #abonnement form { grid-template-columns: 1fr; } #quarto-content .fin-billet #abonnement button { width: 100%; } }
+
+/* Autres billets : pour continuer la lecture */
 .billet #quarto-content .fin-lire { margin-top: 48px; }
 .billet #quarto-content .fin-billet .section-head { margin-bottom: 4px; }
-.billet #quarto-content .fin-billet h2.section-title { margin: 0; font-family: var(--font-label); font-size: 15px; font-weight: 800; line-height: inherit;
-  text-transform: uppercase; letter-spacing: .1em; color: var(--accent); }
+.billet #quarto-content .fin-billet h2.section-title { margin: 0; font-family: var(--font-label); font-size: 14px; font-weight: 800; line-height: 1.3; letter-spacing: .1em; color: var(--bg); }
+.billet #quarto-content .fin-billet .post-row { grid-template-columns: 1fr; gap: 0; }
+.billet #quarto-content .fin-billet .post-row .meta { gap: 4px 10px; }
+.billet #quarto-content .fin-billet .post-row p { font-size: 16px; }
 .billet #quarto-content .fin-billet .post-row:last-child { border-bottom: 0; }
-
-/* Pour citer (bloc ajouté par site.js) */
-.billet #quarto-content > .pour-citer { margin-top: 40px; padding: 16px 18px; border: 2.5px solid var(--frame); border-left: 8px solid var(--accent-2); }
-.pour-citer h2 { font-family: var(--font-label) !important; font-size: 13px !important; text-transform: uppercase; letter-spacing: .1em; font-weight: 800; color: var(--muted) !important; margin: 0 0 6px !important; }
-.pour-citer p { margin: 0 0 10px; font-size: 16px; overflow-wrap: anywhere; }
-.cite-copy { font: inherit; font-family: var(--font-label); font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; padding: 4px 12px; background: none; color: var(--ink); border: 2px solid var(--ink); cursor: pointer; }
-.cite-copy:hover { color: var(--accent-2); border-color: var(--accent-2); }
 
 /* Bloc « Citation » de Quarto en fin de billet */
 #quarto-citation { margin-top: 24px; }
 #quarto-citation .citation-bibtex, #quarto-appendix pre { background: var(--code-bg); color: var(--ink); border: 0; border-left: 6px solid var(--accent-2); font-size: 13px; padding: 12px 14px; white-space: pre-wrap; }
+#quarto-content #abonnement .sub-legal a { color: var(--ink); text-decoration-color: var(--accent-2); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+#quarto-content #abonnement .sub-legal a:hover { color: var(--accent-2-text); }

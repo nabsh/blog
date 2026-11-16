@@ -73,17 +73,43 @@
     var canon = 'https://blog.sheikhhassan.com' + location.pathname.replace(/index\.html$/, '');
     var ref = 'Sheikh Hassan, Nabil (' + when.trim().split(' ').pop() + '). « ' + title.trim() + ' ». Note de blog, ' + when.trim() + ', ' + canon;
     var cite = document.createElement('section'); cite.id = 'pour-citer'; cite.className = 'pour-citer';
-    cite.innerHTML = '<h2>Pour citer ce billet</h2><p></p><button type="button" class="cite-copy">Copier</button>';
+    cite.innerHTML = '<h2>Pour citer</h2><p></p><button type="button" class="cite-copy">Copier</button>';
     cite.querySelector('p').textContent = ref;
     cite.querySelector('.cite-copy').addEventListener('click', function (e) {
       var b = e.currentTarget; if (navigator.clipboard) navigator.clipboard.writeText(ref).then(function () { b.textContent = 'Copié'; dire('Référence copiée'); setTimeout(function () { b.textContent = 'Copier'; }, 1600); });
     });
+    // Fin de billet, dans l'ordre : notes (annexe de Quarto), pour citer, abonnement, autres billets
     document.addEventListener('DOMContentLoaded', function () {
       var app = document.getElementById('quarto-appendix'), foot = document.querySelector('.site-footer');
-      (app || foot).before(cite);
+      if (app) app.after(cite); else foot.before(cite);
       finBillet(cite);
     });
   }
+
+  // Notes en marge : chaque note est recopiée à côté de son appel (affichée dès 1024 px par nsh.css).
+  // La liste de fin reste en place pour les lecteurs d'écran ; la copie en marge leur est masquée.
+  document.addEventListener('DOMContentLoaded', function () {
+    var large = window.matchMedia('(min-width: 1024px)');
+    document.querySelectorAll('.billet a.footnote-ref').forEach(function (a) {
+      var li = document.getElementById((a.getAttribute('href') || '').split('#').pop()); if (!li) return;
+      var copie = li.cloneNode(true); copie.querySelectorAll('.footnote-back').forEach(function (x) { x.remove(); });
+      var s = document.createElement('span'); s.className = 'sidenote'; s.setAttribute('aria-hidden', 'true');
+      var num = document.createElement('span'); num.className = 'sn-num'; num.textContent = a.textContent.trim();
+      var corps = document.createElement('span');
+      corps.innerHTML = Array.prototype.map.call(copie.childNodes, function (x) {
+        return x.nodeType === 1 && x.tagName === 'P' ? x.innerHTML : (x.outerHTML || x.textContent); }).join(' ');
+      s.appendChild(num); s.appendChild(corps); a.after(s);
+      // Sur grand écran, un clic sur l'appel montre la note en marge au lieu de sauter en bas de page
+      a.addEventListener('click', function (e) {
+        if (!large.matches) return;
+        e.preventDefault(); s.classList.add('flash'); setTimeout(function () { s.classList.remove('flash'); }, 900);
+      });
+    });
+    // La bulle de Quarto au survol ferait doublon avec la note en marge
+    addEventListener('load', function () {
+      document.querySelectorAll('.billet a.footnote-ref').forEach(function (a) { if (a._tippy && large.matches) a._tippy.disable(); });
+    });
+  });
 
   // Lien d'évitement : il vise le premier bloc de contenu après la barre du haut
   document.addEventListener('DOMContentLoaded', function () {
@@ -104,7 +130,7 @@
     var nom = ((document.querySelector('.post-head .rub') || {}).textContent || '').trim();
     fin.querySelector('.rss-rub').href = '/blog/' + slug + '.xml';
     if (nom) fin.querySelector('.rss-rub').textContent = nom;
-    cite.before(fin);
+    cite.after(fin);
     fin.querySelectorAll('form.kit-form').forEach(kitForm);
 
     var lire = fin.querySelector('.fin-lire'), liste = fin.querySelector('.fin-liste');
@@ -112,29 +138,30 @@
     var billets = function (xml) {
       return Array.prototype.map.call(new DOMParser().parseFromString(xml, 'text/xml').querySelectorAll('item'), function (it) {
         var get = function (t) { return ((it.querySelector(t) || {}).textContent || '').trim(); };
-        return { titre: get('title'), lien: new URL(get('link'), location.href).pathname, date: new Date(get('pubDate')) };
+        // Le résumé du flux peut contenir du HTML : on n'en garde que le texte
+        var resume = new DOMParser().parseFromString(get('description'), 'text/html').body.textContent.trim();
+        return { titre: get('title'), lien: new URL(get('link'), location.href).pathname, date: new Date(get('pubDate')), resume: resume };
       }).filter(function (b) { return b.lien.replace(/index\.html$/, '') !== ici; });
     };
-    var montrer = function (items, titre, lien, texte) {
+    // Jusqu'à trois billets : ceux de la même rubrique d'abord, complétés par les plus récents du blog
+    var montrer = function (items) {
       if (!items.length) return;
-      lire.querySelector('.section-title').textContent = titre;
-      var tous = lire.querySelector('.fin-tous'); tous.href = lien; tous.textContent = texte;
-      items.slice(0, 2).forEach(function (b) {
-        var row = document.createElement('article'); row.className = 'post-row'; row.dataset.rub = rub;
-        row.innerHTML = '<div class="when"></div><div><a class="t"></a></div>';
+      items.slice(0, 3).forEach(function (b) {
+        var row = document.createElement('article'); row.className = 'post-row';
+        row.innerHTML = '<div><div class="meta"><span class="when"></span></div><a class="t"></a><p></p></div>';
         row.querySelector('.when').textContent = isNaN(b.date) ? '' : b.date.toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
         var a = row.querySelector('a'); a.href = b.lien; a.textContent = b.titre;
+        var p = row.querySelector('p'); if (b.resume) p.textContent = b.resume.length > 180 ? b.resume.slice(0, 177).replace(/\s+\S*$/, '') + '…' : b.resume; else p.remove();
         liste.appendChild(row);
       });
       lire.hidden = false;
     };
     if (!window.fetch || !window.DOMParser) return;
-    var lireFlux = function (url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(billets); };
-    // Même rubrique d'abord ; sinon, les autres billets du blog
-    lireFlux('/blog/' + slug + '.xml').then(function (items) {
-      if (items.length) return montrer(items, 'Dans la même rubrique', '/blog/' + slug + '.html', 'Toute la rubrique →');
-      return lireFlux('/blog.xml').then(function (tous) { montrer(tous, 'À lire aussi', '/blog.html', 'Tous les billets →'); });
-    }).catch(function () {});
+    var lireFlux = function (url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(billets).catch(function () { return []; }); };
+    Promise.all([lireFlux('/blog/' + slug + '.xml'), lireFlux('/blog.xml')]).then(function (r) {
+      var vus = {}, items = r[0].concat(r[1]).filter(function (b) { if (vus[b.lien]) return false; vus[b.lien] = true; return true; });
+      montrer(items);
+    });
   }
 
   // Abonnement : envoi à Kit sans quitter la page (sans JavaScript, le formulaire part directement chez Kit)
